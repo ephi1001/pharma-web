@@ -2,7 +2,6 @@ import React from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Contact from './components/Contact';
-import { useLanguage } from './contexts/LanguageContext';
 
 export default function App() {
   return (
@@ -29,6 +28,29 @@ export default function App() {
         </div>
       </header>
 
+      {/* Why Choose Us */}
+      <section id="why-choose-us" className="py-16 bg-gradient-to-br from-blue-50 via-teal-50 to-cyan-50">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-5xl font-bold text-blue-900 mb-12">Why Choose Us?</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-blue-100 to-teal-100 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border border-blue-200">
+              <div className="text-6xl mb-4">🛡️</div>
+              <h3 className="text-xl font-semibold text-blue-900 mb-4">Quality & Safety</h3>
+              <p className="text-gray-700">Ensuring the highest standards of quality, safety, and regulatory compliance in every product we deliver.</p>
+            </div>
+            <div className="bg-gradient-to-br from-purple-100 to-cyan-100 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border border-purple-200">
+              <div className="text-6xl mb-4">👥</div>
+              <h3 className="text-xl font-semibold text-blue-900 mb-4">Trusted Expertise</h3>
+              <p className="text-gray-700">Backed by experienced professionals dedicated to reliability, transparency, and patient well-being.</p>
+            </div>
+            <div className="bg-gradient-to-br from-teal-100 to-cyan-100 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border border-teal-200">
+              <div className="text-6xl mb-4">🔬</div>
+              <h3 className="text-xl font-semibold text-blue-900 mb-4">Innovation & Research</h3>
+              <p className="text-gray-700">Driven by continuous research, advanced technology, and innovative solutions in pharmaceutical science.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Products / Solutions */}
       <section id="products" className="py-16 bg-gray-50">
