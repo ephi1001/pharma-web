@@ -1,8 +1,10 @@
+ import { useState } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
-import { Trophy, Handshake, Sparkles } from 'lucide-react';
+import { Trophy, Handshake, Sparkles, Shield, Users, Lightbulb } from 'lucide-react';
 
 export default function About() {
   const { language } = useLanguage();
+  const [expandedCard, setExpandedCard] = useState(null);
 
   const content = {
     en: {
@@ -17,6 +19,23 @@ export default function About() {
       vision: {
         title: 'Our Vision',
         text: 'To be the global leader in pharmaceutical innovation, providing accessible, effective, and sustainable healthcare solutions that improve lives worldwide.'
+      },
+      whyChooseUs: {
+        title: 'Why Choose Us?',
+        items: [
+          {
+            title: 'Quality & Safety',
+            description: 'Ensuring the highest standards of quality, safety, and regulatory compliance in every product we deliver.'
+          },
+          {
+            title: 'Trusted Expertise',
+            description: 'Backed by experienced professionals dedicated to reliability, transparency, and patient well-being.'
+          },
+          {
+            title: 'Innovation & Research',
+            description: 'Driven by continuous research, advanced technology, and innovative solutions in pharmaceutical science.'
+          }
+        ]
       },
       story: {
         title: 'Our Story',
@@ -37,7 +56,7 @@ export default function About() {
         ]
       },
       values: {
-        title: 'Why Choose Us?',
+        title: 'Our Values',
         items: [
           {
             title: 'Excellence',
@@ -242,18 +261,47 @@ export default function About() {
           </div>
 
           {/* Why Choose Us Section */}
-          <div className="bg-gray-50 rounded-3xl shadow-lg p-10 mb-20">
-            <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center text-blue-900">{t.whyChooseUs.title}</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {t.whyChooseUs.items.map((item, index) => (
-                <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                  <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
-                    <span className="text-2xl text-white">{index + 1}</span>
-                  </div>
-                  <h3 className="text-xl font-semibold text-blue-900 mb-3">{item.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{item.description}</p>
-                </div>
-              ))}
+          <div className="py-16 bg-gradient-to-br from-slate-50 via-blue-50 to-slate-50">
+            <div className="container mx-auto px-4">
+              <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-blue-900">{t.whyChooseUs.title}</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                {t.whyChooseUs.items.map((item, index) => {
+                  const icons = [<Shield size={32} />, <Users size={32} />, <Lightbulb size={32} />];
+                  const gradients = [
+                    'from-blue-500 to-cyan-400',
+                    'from-teal-500 to-green-400',
+                    'from-purple-500 to-blue-400'
+                  ];
+                  const isExpanded = expandedCard === index;
+
+                  return (
+                    <div
+                      key={index}
+                      onClick={() => setExpandedCard(isExpanded ? null : index)}
+                      className={`bg-white/70 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:transform hover:scale-105 border border-white/20 ${
+                        isExpanded ? 'ring-2 ring-blue-500' : ''
+                      }`}
+                    >
+                      <div className="p-8">
+                        <div className={`w-16 h-16 bg-gradient-to-br ${gradients[index]} rounded-2xl flex items-center justify-center text-white mb-6 mx-auto shadow-lg`}>
+                          {icons[index]}
+                        </div>
+                        <h3 className={`mb-4 text-center transition-all duration-300 text-xl ${isExpanded ? 'text-blue-900 font-black' : 'text-gray-600 font-bold'}`}>{item.title}</h3>
+                        <p className={`text-gray-600 leading-relaxed text-center transition-all duration-300 ${
+                          isExpanded ? 'line-clamp-none' : 'line-clamp-3'
+                        }`}>
+                          {item.description}
+                        </p>
+                        <div className="text-center mt-4">
+                          <span className="text-blue-600 font-medium text-sm">
+                            {isExpanded ? 'Click to collapse' : 'Click to expand'}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
 
