@@ -261,47 +261,45 @@ export default function About() {
           </div>
 
           {/* Why Choose Us Section */}
-          <div className="py-16 bg-gradient-to-br from-slate-50 via-blue-50 to-slate-50">
-            <div className="container mx-auto px-4">
-              <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-blue-900">{t.whyChooseUs.title}</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                {t.whyChooseUs.items.map((item, index) => {
-                  const icons = [<Shield size={32} />, <Users size={32} />, <Lightbulb size={32} />];
-                  const gradients = [
-                    'from-blue-500 to-cyan-400',
-                    'from-teal-500 to-green-400',
-                    'from-purple-500 to-blue-400'
-                  ];
-                  const isExpanded = expandedCard === index;
+          <div className="bg-white rounded-2xl shadow-lg p-8 mb-20 hover:shadow-xl transition-shadow duration-300">
+            <h2 className="text-3xl font-bold text-black text-center mb-8">{t.whyChooseUs.title}</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {t.whyChooseUs.items.map((item, index) => {
+                const icons = [<Shield size={32} />, <Users size={32} />, <Lightbulb size={32} />];
+                const gradients = [
+                  'from-blue-500 to-cyan-400',
+                  'from-teal-500 to-green-400',
+                  'from-purple-500 to-blue-400'
+                ];
+                const isExpanded = expandedCard === index;
 
-                  return (
-                    <div
-                      key={index}
-                      onClick={() => setExpandedCard(isExpanded ? null : index)}
-                      className={`bg-white/70 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:transform hover:scale-105 border border-white/20 ${
-                        isExpanded ? 'ring-2 ring-blue-500' : ''
-                      }`}
-                    >
-                      <div className="p-8">
-                        <div className={`w-16 h-16 bg-gradient-to-br ${gradients[index]} rounded-2xl flex items-center justify-center text-white mb-6 mx-auto shadow-lg`}>
-                          {icons[index]}
-                        </div>
-                        <h3 className={`mb-4 text-center transition-all duration-300 text-xl ${isExpanded ? 'text-blue-900 font-black' : 'text-gray-600 font-bold'}`}>{item.title}</h3>
-                        <p className={`text-gray-600 leading-relaxed text-center transition-all duration-300 ${
-                          isExpanded ? 'line-clamp-none' : 'line-clamp-3'
-                        }`}>
-                          {item.description}
-                        </p>
-                        <div className="text-center mt-4">
-                          <span className="text-blue-600 font-medium text-sm">
-                            {isExpanded ? 'Click to collapse' : 'Click to expand'}
-                          </span>
-                        </div>
-                      </div>
+                return (
+                  <div
+                    key={index}
+                    onClick={() => setExpandedCard(isExpanded ? null : index)}
+                    className={`bg-gradient-to-br from-slate-50 to-blue-50 rounded-xl p-6 hover:shadow-lg transition-all duration-300 cursor-pointer hover:transform hover:scale-105 border-2 ${
+                      isExpanded ? 'border-blue-500 shadow-lg' : 'border-transparent'
+                    }`}
+                  >
+                    <div className={`w-16 h-16 bg-gradient-to-br ${gradients[index]} rounded-xl flex items-center justify-center text-white mb-4 mx-auto shadow-md`}>
+                      {icons[index]}
                     </div>
-                  );
-                })}
-              </div>
+                    <h3 className={`mb-3 text-center transition-all duration-300 text-lg ${isExpanded ? 'text-blue-900 font-bold' : 'text-gray-700 font-semibold'}`}>
+                      {item.title}
+                    </h3>
+                    <p className={`text-gray-600 leading-relaxed text-center text-sm transition-all duration-300 ${
+                      isExpanded ? 'line-clamp-none' : 'line-clamp-3'
+                    }`}>
+                      {item.description}
+                    </p>
+                    <div className="text-center mt-3">
+                      <span className="text-blue-600 font-medium text-xs">
+                        {isExpanded ? '▲ Click to collapse' : '▼ Click to expand'}
+                      </span>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
 
