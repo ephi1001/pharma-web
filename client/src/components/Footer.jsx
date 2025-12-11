@@ -21,7 +21,6 @@ export default function Footer() {
               <li><a href="#hero" className="hover:text-blue-400 transition">Home</a></li>
               <li><a href="#about" className="hover:text-blue-400 transition">About</a></li>
               <li><a href="#products" className="hover:text-blue-400 transition">Products</a></li>
-              <li><a href="#research" className="hover:text-blue-400 transition">Research</a></li>
               <li><a href="#contact" className="hover:text-blue-400 transition">Contact</a></li>
             </ul>
           </div>
