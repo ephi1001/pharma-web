@@ -3,6 +3,12 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Contact from './components/Contact';
 import About from './components/About';
+import img1 from './assets/pictures/photo_2025-12-11_05-42-21.jpg';
+import img2 from './assets/pictures/photo_2025-12-11_05-42-57.jpg';
+import img3 from './assets/pictures/photo_2025-12-11_05-43-09.jpg';
+import img4 from './assets/pictures/photo_2025-12-11_05-43-21.jpg';
+import img5 from './assets/pictures/photo_2025-12-11_05-43-25.jpg';
+import img6 from './assets/pictures/photo_2025-12-11_05-43-32.jpg';
 
 export default function App() {
   const [selectedCard, setSelectedCard] = useState(null);
@@ -109,65 +115,36 @@ export default function App() {
       {/* Products / Solutions */}
       <section id="products" className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-blue-900 mb-12">Our Products & Solutions</h2>
+          <h2 className="text-4xl font-bold text-center text-black mb-12">Products</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className={`bg-white p-6 rounded-lg shadow-md transition-all duration-300 ${selectedCard === 3 ? 'font-bold ring-2 ring-blue-500' : ''} cursor-pointer`} onClick={() => handleCardClick(3)}>
-              <h3 className="text-xl font-semibold text-blue-900 mb-2">NovaTherapy</h3>
-              <p className="text-gray-600 mb-4">Advanced targeted therapy for oncology patients, designed to minimize side effects while maximizing efficacy.</p>
-              <button className="text-blue-600 hover:text-blue-800 font-semibold">Learn More →</button>
+            <div className={`bg-white p-6 rounded-lg shadow-md hover:shadow-2xl transition-all duration-300 cursor-pointer`} onClick={() => handleCardClick(3)}>
+              <img src={img1} alt="NovaTherapy" className="w-full h-48 object-cover mb-4 rounded transition-all duration-300 hover:scale-110 hover:shadow-xl hover:brightness-110" />
+              <h3 className={`text-xl font-semibold text-blue-900 mb-2 hover:font-bold ${selectedCard === 3 ? 'font-bold' : ''}`}>NovaTherapy</h3>
             </div>
-            <div className={`bg-white p-6 rounded-lg shadow-md transition-all duration-300 ${selectedCard === 4 ? 'font-bold ring-2 ring-blue-500' : ''} cursor-pointer`} onClick={() => handleCardClick(4)}>
-              <h3 className="text-xl font-semibold text-blue-900 mb-2">BioShield Vaccine</h3>
-              <p className="text-gray-600 mb-4">Next-generation vaccine platform providing long-lasting immunity against emerging infectious diseases.</p>
-              <button className="text-blue-600 hover:text-blue-800 font-semibold">Learn More →</button>
+            <div className={`bg-white p-6 rounded-lg shadow-md hover:shadow-2xl transition-all duration-300 cursor-pointer`} onClick={() => handleCardClick(4)}>
+              <img src={img2} alt="BioShield Vaccine" className="w-full h-48 object-cover mb-4 rounded transition-all duration-300 hover:scale-110 hover:shadow-xl hover:brightness-110" />
+              <h3 className={`text-xl font-semibold text-blue-900 mb-2 hover:font-bold ${selectedCard === 4 ? 'font-bold' : ''}`}>BioShield Vaccine</h3>
             </div>
-            <div className={`bg-white p-6 rounded-lg shadow-md transition-all duration-300 ${selectedCard === 5 ? 'font-bold ring-2 ring-blue-500' : ''} cursor-pointer`} onClick={() => handleCardClick(5)}>
-              <h3 className="text-xl font-semibold text-blue-900 mb-2">NeuroCure</h3>
-              <p className="text-gray-600 mb-4">Innovative treatment for neurodegenerative disorders, slowing disease progression and improving quality of life.</p>
-              <button className="text-blue-600 hover:text-blue-800 font-semibold">Learn More →</button>
+            <div className={`bg-white p-6 rounded-lg shadow-md hover:shadow-2xl transition-all duration-300 cursor-pointer`} onClick={() => handleCardClick(5)}>
+              <img src={img3} alt="NeuroCure" className="w-full h-48 object-cover mb-4 rounded transition-all duration-300 hover:scale-110 hover:shadow-xl hover:brightness-110" />
+              <h3 className={`text-xl font-semibold text-blue-900 mb-2 hover:font-bold ${selectedCard === 5 ? 'font-bold' : ''}`}>NeuroCure</h3>
             </div>
-            <div className={`bg-white p-6 rounded-lg shadow-md transition-all duration-300 ${selectedCard === 6 ? 'font-bold ring-2 ring-blue-500' : ''} cursor-pointer`} onClick={() => handleCardClick(6)}>
-              <h3 className="text-xl font-semibold text-blue-900 mb-2">CardioGuard</h3>
-              <p className="text-gray-600 mb-4">Comprehensive cardiovascular therapy combining multiple mechanisms for optimal heart health.</p>
-              <button className="text-blue-600 hover:text-blue-800 font-semibold">Learn More →</button>
+            <div className={`bg-white p-6 rounded-lg shadow-md hover:shadow-2xl transition-all duration-300 cursor-pointer`} onClick={() => handleCardClick(6)}>
+              <img src={img4} alt="CardioGuard" className="w-full h-48 object-cover mb-4 rounded transition-all duration-300 hover:scale-110 hover:shadow-xl hover:brightness-110" />
+              <h3 className={`text-xl font-semibold text-blue-900 mb-2 hover:font-bold ${selectedCard === 6 ? 'font-bold' : ''}`}>CardioGuard</h3>
             </div>
-            <div className={`bg-white p-6 rounded-lg shadow-md transition-all duration-300 ${selectedCard === 7 ? 'font-bold ring-2 ring-blue-500' : ''} cursor-pointer`} onClick={() => handleCardClick(7)}>
-              <h3 className="text-xl font-semibold text-blue-900 mb-2">ImmunoBoost</h3>
-              <p className="text-gray-600 mb-4">Immunomodulatory drug enhancing the body's natural defenses against autoimmune conditions.</p>
-              <button className="text-blue-600 hover:text-blue-800 font-semibold">Learn More →</button>
+            <div className={`bg-white p-6 rounded-lg shadow-md hover:shadow-2xl transition-all duration-300 cursor-pointer`} onClick={() => handleCardClick(7)}>
+              <img src={img5} alt="ImmunoBoost" className="w-full h-48 object-cover mb-4 rounded transition-all duration-300 hover:scale-110 hover:shadow-xl hover:brightness-110" />
+              <h3 className={`text-xl font-semibold text-blue-900 mb-2 hover:font-bold ${selectedCard === 7 ? 'font-bold' : ''}`}>ImmunoBoost</h3>
             </div>
-            <div className={`bg-white p-6 rounded-lg shadow-md transition-all duration-300 ${selectedCard === 8 ? 'font-bold ring-2 ring-blue-500' : ''} cursor-pointer`} onClick={() => handleCardClick(8)}>
-              <h3 className="text-xl font-semibold text-blue-900 mb-2">PainRelief Pro</h3>
-              <p className="text-gray-600 mb-4">Advanced pain management solution with reduced opioid dependency and improved safety profile.</p>
-              <button className="text-blue-600 hover:text-blue-800 font-semibold">Learn More →</button>
+            <div className={`bg-white p-6 rounded-lg shadow-md hover:shadow-2xl transition-all duration-300 cursor-pointer`} onClick={() => handleCardClick(8)}>
+              <img src={img6} alt="PainRelief Pro" className="w-full h-48 object-cover mb-4 rounded transition-all duration-300 hover:scale-110 hover:shadow-xl hover:brightness-110" />
+              <h3 className={`text-xl font-semibold text-blue-900 mb-2 hover:font-bold ${selectedCard === 8 ? 'font-bold' : ''}`}>PainRelief Pro</h3>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Research & Development */}
-      <section id="research" className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-blue-900 mb-12">Research & Development</h2>
-          <div className="grid md:grid-cols-3 gap-8 text-center">
-            <div>
-              <div className="text-6xl mb-4">🧬</div>
-              <h3 className="text-xl font-semibold text-blue-900 mb-2">Clinical Trials</h3>
-              <p className="text-gray-600">Conducting rigorous Phase I-III clinical trials to ensure safety and efficacy of our therapies.</p>
-            </div>
-            <div>
-              <div className="text-6xl mb-4">🔬</div>
-              <h3 className="text-xl font-semibold text-blue-900 mb-2">Biotech Innovation</h3>
-              <p className="text-gray-600">Leveraging cutting-edge biotechnology, CRISPR, and AI to accelerate drug discovery.</p>
-            </div>
-            <div>
-              <div className="text-6xl mb-4">📋</div>
-              <h3 className="text-xl font-semibold text-blue-900 mb-2">Regulatory Compliance</h3>
-              <p className="text-gray-600">Adhering to FDA, EMA, and WHO guidelines to bring safe, effective treatments to market.</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Certifications & Compliance */}
       <section id="certifications" className="py-16 bg-gray-50">

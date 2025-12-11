@@ -1,4 +1,4 @@
-import { Award, Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { Award, Phone, Mail, MapPin } from 'lucide-react';
 
 export default function Footer() {
   return (
