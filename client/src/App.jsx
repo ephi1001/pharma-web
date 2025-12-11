@@ -94,24 +94,6 @@ export default function App() {
         </div>
       </header>
 
-      {/* Why Choose Us */}
-      <section id="why-choose-us" ref={sectionRef} className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="bg-[#31487A] p-8 rounded-lg">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-12 text-center">Why Choose Us?</h2>
-            <div className="flex justify-between gap-8">
-              {order.map((index) => (
-                <div key={index} ref={cardRefs[index]} onClick={() => setActiveCard(index)} className={`bg-white p-8 w-80 rounded-lg shadow-lg hover:shadow-xl transition-all duration-500 cursor-pointer ${index === activeCard ? 'scale-110 font-bold' : 'scale-90 blur-sm opacity-70 font-bold'}`}>
-                  <div className="text-6xl mb-4">{cards[index].emoji}</div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">{cards[index].title}</h3>
-                  <p className="text-gray-700">{cards[index].text}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Products / Solutions */}
       <section id="products" className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -145,6 +127,10 @@ export default function App() {
         </div>
       </section>
 
+      {/* About Section */}
+      <section id="about">
+        <About />
+      </section>
 
       {/* Certifications & Compliance */}
       <section id="certifications" className="py-16 bg-gray-50">
