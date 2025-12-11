@@ -1,10 +1,9 @@
- import { useState } from 'react';
+import { useState } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { Trophy, Handshake, Sparkles, Shield, Users, Lightbulb } from 'lucide-react';
 
 export default function About() {
   const { language } = useLanguage();
-  const [expandedCard, setExpandedCard] = useState(null);
 
   const content = {
     en: {
@@ -19,23 +18,6 @@ export default function About() {
       vision: {
         title: 'Our Vision',
         text: 'To be the global leader in pharmaceutical innovation, providing accessible, effective, and sustainable healthcare solutions that improve lives worldwide.'
-      },
-      whyChooseUs: {
-        title: 'Why Choose Us?',
-        items: [
-          {
-            title: 'Quality & Safety',
-            description: 'Ensuring the highest standards of quality, safety, and regulatory compliance in every product we deliver.'
-          },
-          {
-            title: 'Trusted Expertise',
-            description: 'Backed by experienced professionals dedicated to reliability, transparency, and patient well-being.'
-          },
-          {
-            title: 'Innovation & Research',
-            description: 'Driven by continuous research, advanced technology, and innovative solutions in pharmaceutical science.'
-          }
-        ]
       },
       story: {
         title: 'Our Story',
@@ -53,6 +35,23 @@ export default function About() {
           'Biotechnology and AI-driven research',
           'Global distribution and supply chain management',
           'Quality assurance and GMP standards'
+        ]
+      },
+      whyChooseUs: {
+        title: 'Why Choose Us?',
+        items: [
+          {
+            title: 'Quality & Safety',
+            description: 'GMP certified facilities ensuring the highest standards of quality, safety, and regulatory compliance in every product we deliver. Each product undergoes rigorous quality control, meets global standards (FDA, EMA), and maintains full traceability from manufacturing to distribution.'
+          },
+          {
+            title: 'Trusted Expertise',
+            description: 'Over 10 years of pharmaceutical expertise from licensed pharmacists, scientists, and researchers. We prioritize patient safety, ethical practices, and transparency in all our interactions with healthcare providers.'
+          },
+          {
+            title: 'Innovation & Research',
+            description: 'AI-driven drug discovery, biotechnology, and advanced clinical trial methodologies. We continuously invest in cutting-edge research to develop next-generation treatments for complex medical conditions.'
+          }
         ]
       },
       values: {
@@ -121,20 +120,16 @@ export default function About() {
         title: 'ለምን እኛን ይመርጣሉ?',
         items: [
           {
-            title: 'ዓለም አቀፍ ስራ ብቃት',
-            description: 'በፋርማሲውቲካል ምርምር እና እድገት ከአሥር ዓመታት በላይ ልምድ በ50+ አገሮች ላይ።'
+            title: 'ጥራት እና ደህንነት',
+            description: 'ጂኤምፒ የተረጋገጡ ቦታዎች የፋርማሲውቲካል ብቃትን የሚያረጋግጡ። እያንዳንዱ ምርት ጥብቅ የጥራት ቁጥጥር ያልፋል፣ ዓለም አቀፍ የምርመራ ደረጃዎችን (ኤፍዲኤ፣ ኢኤምኤ) ያሟላል እና ከማምረት እስከ ስርጭት ሙሉ መከታተል ያቆያል።'
           },
           {
-            title: 'የተለያዩ ቴክኖሎጂ',
-            description: 'ኤአይ ምርምር፣ ባዮቴክኖሎጂ እና የላቀ ክሊኒካል ሙከራዎችን ለተለያዩ ሕክምናዎች በመስራት።'
+            title: 'የታመነ ብቃት',
+            description: 'ከ10 ዓመታት በላይ የፋርማሲውቲካል ፈጠራ ከፈቃድ ያላቸው ፋርማሲስቶች፣ የምርምር ሳይንቲስቶች እና የምርመራ ባለሙያዎች ቡድን ጋር። የታካሚ ደህንነትን፣ ስነ-ምግባራዊ ልምዶችን እና ከጤና አገልግሎት ሰጪዎች ጋር ግልጽ ግንኙነትን እንቀድማለን።'
           },
           {
-            title: 'የጥሩ ሁኔታ ማረጋገጫ',
-            description: 'ጂኤምፒ የተረጋገጡ ቦታዎች በሁሉም ምርቶቻችን ውስጥ የተለያዩ ደረጃዎችን የሚያረጋግጡ።'
-          },
-          {
-            title: 'የተለያዩ አቀራረብ አቀራረብ',
-            description: 'እያንዳንዱ ሕክምና በተለያዩ ውጤቶች እና የሕይወት ጥሩ ሁኔታ እንደ ዋና ትኩረት ተሰማራ።'
+            title: 'ፈጠራ እና ምርምር',
+            description: 'ኤአይ የሚመራ የመድኃኒት ግኝት፣ ባዮቴክኖሎጂ እና የላቀ ክሊኒካል ሙከራ ዘዴዎችን የሚጠቀሙ ዘመናዊ የምርምር እና ልማት ላቦራቶሪዎች። ለተወሳሰቡ የሕክምና ሁኔታዎች ቀጣይ ትውልድ ሕክምናዎችን ለማዳበር በከፍተኛ ሁኔታ እንኢንቨስት እናደርጋለን።'
           }
         ]
       },
@@ -181,7 +176,6 @@ export default function About() {
 
   const t = content[language];
 
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-slate-50">
 
@@ -210,15 +204,6 @@ export default function About() {
         </div>
       </div>
 
-      {/* Vision Section */}
-      <div className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-8">{t.vision.title}</h2>
-            <p className="text-lg md:text-xl text-gray-700 leading-relaxed">{t.vision.text}</p>
-          </div>
-        </div>
-      </div>
 
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-6xl mx-auto">
@@ -261,8 +246,9 @@ export default function About() {
           </div>
 
           {/* Why Choose Us Section */}
-          <div className="bg-white rounded-2xl shadow-lg p-8 mb-20 hover:shadow-xl transition-shadow duration-300">
-            <h2 className="text-3xl font-bold text-black text-center mb-8">{t.whyChooseUs.title}</h2>
+          <div className="rounded-2xl shadow-lg p-8 mb-20 hover:shadow-xl transition-shadow duration-300" style={{ backgroundColor: '#1c4e78' }}>
+            <h2 className="text-3xl font-bold text-white text-center mb-8">{t.whyChooseUs.title}</h2>
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {t.whyChooseUs.items.map((item, index) => {
                 const icons = [<Shield size={32} />, <Users size={32} />, <Lightbulb size={32} />];
@@ -271,32 +257,22 @@ export default function About() {
                   'from-teal-500 to-green-400',
                   'from-purple-500 to-blue-400'
                 ];
-                const isExpanded = expandedCard === index;
 
                 return (
                   <div
                     key={index}
-                    onClick={() => setExpandedCard(isExpanded ? null : index)}
-                    className={`bg-gradient-to-br from-slate-50 to-blue-50 rounded-xl p-6 hover:shadow-lg transition-all duration-300 cursor-pointer hover:transform hover:scale-105 border-2 ${
-                      isExpanded ? 'border-blue-500 shadow-lg' : 'border-transparent'
-                    }`}
+                    className="rounded-xl p-6 border-2 border-transparent hover:scale-105 hover:shadow-2xl hover:brightness-110 transition-all duration-300 cursor-pointer"
+                    style={{ backgroundColor: '#2a6d94' }}
                   >
-                    <div className={`w-16 h-16 bg-gradient-to-br ${gradients[index]} rounded-xl flex items-center justify-center text-white mb-4 mx-auto shadow-md`}>
+                    <div className={`w-16 h-16 bg-gradient-to-br ${gradients[index]} rounded-xl flex items-center justify-center text-white mb-4 mx-auto shadow-md hover:shadow-lg transition-shadow duration-300`}>
                       {icons[index]}
                     </div>
-                    <h3 className={`mb-3 text-center transition-all duration-300 text-lg ${isExpanded ? 'text-blue-900 font-bold' : 'text-gray-700 font-semibold'}`}>
+                    <h3 className="mb-3 text-center text-lg text-white font-semibold hover:font-bold transition-all duration-300">
                       {item.title}
                     </h3>
-                    <p className={`text-gray-600 leading-relaxed text-center text-sm transition-all duration-300 ${
-                      isExpanded ? 'line-clamp-none' : 'line-clamp-3'
-                    }`}>
+                    <p className="text-gray-100 leading-relaxed text-center text-sm hover:text-white transition-colors duration-300">
                       {item.description}
                     </p>
-                    <div className="text-center mt-3">
-                      <span className="text-blue-600 font-medium text-xs">
-                        {isExpanded ? '▲ Click to collapse' : '▼ Click to expand'}
-                      </span>
-                    </div>
                   </div>
                 );
               })}
