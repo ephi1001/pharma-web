@@ -19,20 +19,12 @@ export default function Header() {
     { name: 'Contact', id: 'contact', path: '#contact' }
   ];
 
-  // Get active tab from hash
-  const getActiveTab = () => {
-    const hash = window.location.hash;
-    if (hash === '#hero' || hash === '') return 'Home';
-    const found = navigation.find((item) => item.path === hash);
-    return found ? found.name : '';
-  };
-  const activeTab = getActiveTab();
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       (!scrolled)
         ? 'bg-transparent'
-        : 'bg-white/80 backdrop-blur-xl border-b border-stone-200 shadow-sm'
+        : 'bg-white/90 backdrop-blur-xl border-b border-stone-200 shadow-sm'
     }`}>
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
@@ -42,8 +34,9 @@ export default function Header() {
               href="#hero"
               className="flex items-center cursor-pointer transform transition-all duration-300 hover:scale-110"
             >
+              <img src="/src/assets/pictures/photo_2025-12-11_16-43-44.jpg" alt="ABR Pharma Logo" className="h-10 w-10 mr-2 rounded-full" />
               <span className="text-2xl font-black bg-gradient-to-r from-blue-600 via-purple-500 to-red-600 bg-clip-text text-transparent">
-                NovaCure
+                ABR Pharma
               </span>
             </a>
           </div>
@@ -60,13 +53,9 @@ export default function Header() {
                   href={item.path}
                   onClick={() => setIsOpen(false)}
                   className={`group relative px-6 py-3 rounded-xl text-sm font-bold transition-all duration-300 overflow-hidden ${
-                    activeTab === item.name
-                      ? ((!scrolled)
-                          ? 'bg-gradient-to-r from-stone-900 to-stone-700 text-white shadow-2xl transform scale-105'
-                          : 'bg-stone-900 text-white shadow-sm transform scale-105')
-                      : ((!scrolled)
-                          ? 'text-gray-200 hover:text-white hover:bg-gradient-to-r hover:from-stone-800 hover:to-stone-600 hover:scale-110 hover:shadow-lg'
-                          : 'text-stone-700 hover:text-stone-900 hover:bg-stone-100 hover:scale-110 hover:shadow-sm')
+                    (!scrolled)
+                      ? 'text-gray-200 hover:text-white hover:bg-gradient-to-r hover:from-blue-600 hover:via-purple-500 hover:to-red-600 hover:scale-110 hover:shadow-lg'
+                      : 'text-stone-700 hover:text-white hover:bg-gradient-to-r hover:from-blue-600 hover:via-purple-500 hover:to-red-600 hover:scale-110 hover:shadow-lg'
                   }`}
                   style={{
                     animationDelay: `${index * 0.1}s`,
@@ -76,9 +65,6 @@ export default function Header() {
                   <div className="flex items-center space-x-2 relative z-10">
                     <span>{item.name}</span>
                   </div>
-                  {activeTab === item.name && (
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-500 to-red-600 opacity-80 animate-pulse" />
-                  )}
                   <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
                 </a>
               ))}
@@ -119,13 +105,9 @@ export default function Header() {
                 href={item.path}
                 onClick={() => setIsOpen(false)}
                 className={`w-full flex items-center space-x-3 px-6 py-4 text-left font-bold transition-all duration-300 ${
-                  activeTab === item.name
-                    ? ((!scrolled)
-                        ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg'
-                        : 'bg-stone-900 text-white shadow-sm')
-                    : ((!scrolled)
-                        ? 'text-gray-200 hover:bg-gradient-to-r hover:from-purple-100 hover:to-pink-100 hover:text-gray-900'
-                        : 'text-stone-700 hover:bg-stone-100 hover:text-stone-900')
+                  (!scrolled)
+                    ? 'text-gray-200 hover:bg-gradient-to-r hover:from-blue-600 hover:via-purple-500 hover:to-red-600 hover:text-white'
+                    : 'text-stone-700 hover:bg-gradient-to-r hover:from-blue-600 hover:via-purple-500 hover:to-red-600 hover:text-white'
                 } ${index !== navigation.length - 1 ? 'border-b border-white/10' : ''}`}
                 style={{
                   animationDelay: `${index * 0.1}s`,
@@ -135,11 +117,6 @@ export default function Header() {
               >
                 <span className="text-2xl">{item.name.charAt(0)}</span>
                 <span className="text-lg">{item.name}</span>
-                {activeTab === item.name && (
-                  <div className="ml-auto">
-                    <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
-                  </div>
-                )}
               </a>
             ))}
           </div>

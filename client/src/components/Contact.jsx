@@ -23,7 +23,7 @@ export default function Contact() {
       phone: 'Phone',
       phoneValue: '+251941913877',
       email: 'Email',
-      emailValue: 'info@novacure.com',
+      emailValue: 'info@abrpharma.biz',
       businessHours: 'Business Hours',
       businessHoursValue: 'Monday - Sunday: 9:00 AM - 6:00 PM',
       name: 'Name',
@@ -40,9 +40,9 @@ export default function Contact() {
       address: 'አድራሻ',
       addressValue: 'አዲስ አበባ፣ ኢትዮጵያ',
       phone: 'ስልክ',
-      phoneValue: '+251941913877',
+      phoneValue: '+251- 969-797-979',
       email: 'ኢሜይል',
-      emailValue: 'info@novacure.com',
+      emailValue: 'info@abrpharma.biz',
       businessHours: 'የስራ ሰዓት',
       businessHoursValue: 'ሰኞ - እሁድ፡ ከጠዋቱ 9:00 - ከምሽቱ 6:00',
       name: 'ስም',
@@ -76,8 +76,9 @@ export default function Contact() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-16">
-      <h1 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">{t.title}</h1>
+    <div className="container mx-auto px-4 min-h-screen flex items-center">
+      <div className="w-full">
+        <h1 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">{t.title}</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
         <div>
@@ -195,6 +196,7 @@ export default function Contact() {
             </button>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );

@@ -2,16 +2,16 @@ import { Award, Phone, Mail, MapPin } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300 py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="bg-gray-900 text-gray-300 min-h-screen flex items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 mb-12">
           <div>
             <div className="flex items-center mb-4">
               <Award className="w-8 h-8 text-blue-400" />
-              <span className="ml-2 text-xl font-bold text-white">NovaCure</span>
+              <span className="ml-2 text-xl font-bold text-white">ABR Pharma</span>
             </div>
             <p className="text-gray-400 mb-4">
-              Your trusted partner for pharmaceutical innovation since 2010.
+              Your trusted partner for pharmaceutical innovation.
             </p>
           </div>
 
@@ -28,11 +28,10 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold text-white mb-4">Services</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="hover:text-blue-400 transition">Drug Discovery & Development</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition">Clinical Trials</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition">Regulatory Compliance</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition">Biotechnology Research</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition">Quality Assurance</a></li>
+              <li><a href="#" className="hover:text-blue-400 transition">Medical Equipment Import</a></li>
+              <li><a href="#" className="hover:text-blue-400 transition">Lab Reagents & Consumables</a></li>
+              <li><a href="#" className="hover:text-blue-400 transition">Pharmaceutical Supply</a></li>
+              <li><a href="#" className="hover:text-blue-400 transition">Baby Food & Formula</a></li>
             </ul>
           </div>
 
@@ -45,11 +44,11 @@ export default function Footer() {
               </div>
               <div className="flex items-center">
                 <Phone className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
-                <span>+251941913877</span>
+                <span>+251- 969-797-979</span>
               </div>
               <div className="flex items-center">
                 <Mail className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
-                <span>info@novacure.com</span>
+                <span>info@abrpharma.biz</span>
               </div>
             </div>
           </div>
@@ -57,7 +56,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-700 pt-8 text-center">
           <p className="text-gray-400">
-            © 2024 NovaCure. All rights reserved.
+            © 2024 ABR Pharma. All rights reserved.
           </p>
         </div>
       </div>
