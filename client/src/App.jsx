@@ -77,9 +77,81 @@ export default function App() {
       <Header />
 
       {/* Hero Section */}
-      <header id="hero" className="relative bg-gradient-to-br from-blue-50 to-blue-100 min-h-screen flex items-center">
+      <header id="hero" className="relative min-h-screen flex items-center">
+        {/* Background Image */}
         <div className="absolute inset-0">
           <img src={newImage} alt="ABR Pharma Background" className="w-full h-full object-cover" />
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <div className="max-w-3xl">
+            {/* Company Name with Icon */}
+            <div className="flex items-center mb-6 animate-fade-in">
+              <div className="w-16 h-16 rounded-xl flex items-center justify-center mr-4" style={{ background: 'linear-gradient(135deg, #06b6d4, #3b82f6)' }}>
+                <svg className="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <h1 className="text-5xl md:text-6xl font-bold text-white">
+                ABR Pharma
+              </h1>
+            </div>
+
+            {/* Tagline */}
+            <h2 className="text-3xl md:text-4xl font-semibold text-white mb-6 animate-slide-up">
+              Advancing Healthcare Through Innovation
+            </h2>
+
+            {/* Description */}
+            <p className="text-xl text-gray-200 mb-10 leading-relaxed animate-slide-up">
+              Your trusted partner for premium pharmaceutical products, medical equipment, and healthcare solutions. We deliver quality, safety, and excellence in every product we supply.
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-wrap gap-4 animate-slide-up">
+              <a
+                href="#products"
+                className="px-8 py-4 rounded-lg font-semibold text-white transition-all duration-300 hover:shadow-xl hover:scale-105"
+                style={{ background: 'linear-gradient(135deg, #06b6d4, #3b82f6)' }}
+              >
+                Explore Our Products
+              </a>
+              <a
+                href="#contact"
+                className="px-8 py-4 rounded-lg font-semibold text-white border-2 border-white hover:bg-white hover:text-gray-900 transition-all duration-300"
+              >
+                Contact Us
+              </a>
+            </div>
+
+            {/* Stats Section */}
+            <div className="grid grid-cols-3 gap-6 mt-16 animate-fade-in">
+              <div className="text-center">
+                <div className="text-4xl font-bold text-white mb-2">10+</div>
+                <div className="text-gray-300 text-sm">Years Experience</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-white mb-2">500+</div>
+                <div className="text-gray-300 text-sm">Satisfied Clients</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-white mb-2">50+</div>
+                <div className="text-gray-300 text-sm">Products</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <a href="#products">
+            <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+          </a>
         </div>
       </header>
 
@@ -115,42 +187,42 @@ export default function App() {
       <section id="why-choose-us" className="min-h-screen bg-gray-50 flex items-center">
         <div className="container mx-auto px-4 w-full">
           <div className="max-w-6xl mx-auto">
-            <div className="rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300" style={{ backgroundColor: '#1c4e78' }}>
-              <h2 className="text-3xl font-bold text-white text-center mb-8">Why Choose Us?</h2>
+            <div className="rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300" style={{ backgroundColor: '#CBB682' }}>
+              <h2 className="text-3xl font-bold text-black text-center mb-8">Why Choose Us?</h2>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="rounded-xl p-6 border-2 border-transparent hover:scale-105 hover:shadow-2xl hover:brightness-110 transition-all duration-300 cursor-pointer" style={{ backgroundColor: '#2a6d94' }}>
+                <div className="rounded-xl p-6 border-2 border-transparent hover:scale-105 hover:shadow-2xl hover:brightness-110 transition-all duration-300 cursor-pointer" style={{ backgroundColor: '#E9DBBD' }}>
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-400 rounded-xl flex items-center justify-center text-white mb-4 mx-auto shadow-md hover:shadow-lg transition-shadow duration-300">
                     <Shield size={32} />
                   </div>
-                  <h3 className="mb-3 text-center text-lg text-white font-semibold hover:font-bold transition-all duration-300">
+                  <h3 className="mb-3 text-center text-lg text-black font-semibold hover:font-bold transition-all duration-300">
                     Quality Product
                   </h3>
-                  <p className="text-gray-100 leading-relaxed text-center text-sm hover:text-white transition-colors duration-300">
+                  <p className="text-black leading-relaxed text-center text-sm transition-colors duration-300">
                     Our GMP certified facilities produce high-quality pharmaceutical products that undergo rigorous quality control, meet global standards (FDA, EMA), and maintain full traceability from manufacturing to distribution.
                   </p>
                 </div>
 
-                <div className="rounded-xl p-6 border-2 border-transparent hover:scale-105 hover:shadow-2xl hover:brightness-110 transition-all duration-300 cursor-pointer" style={{ backgroundColor: '#2a6d94' }}>
+                <div className="rounded-xl p-6 border-2 border-transparent hover:scale-105 hover:shadow-2xl hover:brightness-110 transition-all duration-300 cursor-pointer" style={{ backgroundColor: '#E9DBBD' }}>
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-400 rounded-xl flex items-center justify-center text-white mb-4 mx-auto shadow-md hover:shadow-lg transition-shadow duration-300">
                     <FileText size={32} />
                   </div>
-                  <h3 className="mb-3 text-center text-lg text-white font-semibold hover:font-bold transition-all duration-300">
+                  <h3 className="mb-3 text-center text-lg text-black font-semibold hover:font-bold transition-all duration-300">
                     Regulatory and Marketing Service
                   </h3>
-                  <p className="text-gray-100 leading-relaxed text-center text-sm hover:text-white transition-colors duration-300">
+                  <p className="text-black leading-relaxed text-center text-sm transition-colors duration-300">
                     Expert regulatory affairs and marketing support for pharmaceutical products. We ensure compliance with global standards and provide strategic marketing solutions to enhance product visibility and distribution.
                   </p>
                 </div>
 
-                <div className="rounded-xl p-6 border-2 border-transparent hover:scale-105 hover:shadow-2xl hover:brightness-110 transition-all duration-300 cursor-pointer" style={{ backgroundColor: '#2a6d94' }}>
+                <div className="rounded-xl p-6 border-2 border-transparent hover:scale-105 hover:shadow-2xl hover:brightness-110 transition-all duration-300 cursor-pointer" style={{ backgroundColor: '#E9DBBD' }}>
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-400 rounded-xl flex items-center justify-center text-white mb-4 mx-auto shadow-md hover:shadow-lg transition-shadow duration-300">
                     <DollarSign size={32} />
                   </div>
-                  <h3 className="mb-3 text-center text-lg text-white font-semibold hover:font-bold transition-all duration-300">
+                  <h3 className="mb-3 text-center text-lg text-black font-semibold hover:font-bold transition-all duration-300">
                     Affordable Price
                   </h3>
-                  <p className="text-gray-100 leading-relaxed text-center text-sm hover:text-white transition-colors duration-300">
+                  <p className="text-black leading-relaxed text-center text-sm transition-colors duration-300">
                     Competitive pricing that makes high-quality healthcare accessible to all. We offer cost-effective solutions without sacrificing efficacy, ensuring value for money in every product.
                   </p>
                 </div>

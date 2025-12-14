@@ -1,4 +1,4 @@
- import { useLanguage } from '../contexts/LanguageContext';
+import { useLanguage } from '../contexts/LanguageContext';
 import { Trophy, Handshake, Sparkles, Shield, Users, Lightbulb } from 'lucide-react';
 
 export default function About() {
@@ -213,53 +213,61 @@ export default function About() {
 
 
   return (
-    <div className="h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-slate-50">
-          <section className="relative h-screen flex flex-col items-center justify-center overflow-hidden">
-            <h2 className="text-4xl font-bold text-white mb-20 z-10 p-4 bg-black/30 rounded-lg backdrop-blur-sm">Our Core Identity</h2>
-            <div id="card-area" className="relative w-full max-w-7xl h-full flex items-center justify-center">
-              
-              {/* Vision Card - Left, Red */}
-              <div className="absolute left-[10%] lg:left-[15%] top-1/2 -translate-y-1/2 w-80 lg:w-96 min-h-[400px] bg-rose-500 text-white rounded-3xl p-8 shadow-2xl transform -rotate-6 transition-transform hover:scale-105 hover:z-30 duration-300">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="p-3 bg-white/20 rounded-full">
-                     <Lightbulb className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold">{t.vision.title}</h3>
-                </div>
-                <p className="text-lg leading-relaxed font-medium">{t.vision.text}</p>
-              </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-slate-50">
+      <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
+        <h2 className="text-4xl font-bold text-white mb-20 z-10 p-4 bg-black/30 rounded-lg backdrop-blur-sm">Our Core Identity</h2>
+        <div id="card-area" className="relative w-full max-w-7xl h-full flex items-center justify-center">
 
-              {/* Mission Card - Center, Yellow, On Top */}
-              <div className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-80 lg:w-96 min-h-[400px] bg-amber-400 text-black rounded-3xl p-8 shadow-2xl transform rotate-2 z-20 transition-transform hover:scale-105 hover:z-30 duration-300">
-                 <div className="flex items-center gap-3 mb-6">
-                  <div className="p-3 bg-black/10 rounded-full">
-                     <Trophy className="w-6 h-6 text-black" />
-                  </div>
-                   <h3 className="text-2xl font-bold">{t.mission.title}</h3>
-                </div>
-                <p className="text-lg leading-relaxed font-medium">{t.mission.text}</p>
+          {/* Vision Card - Left, Custom Beige */}
+          <div className="absolute left-[10%] lg:left-[15%] top-1/2 -translate-y-1/2 w-80 lg:w-96 min-h-[400px] bg-[#E9DBBD] text-black rounded-3xl p-8 shadow-2xl transform -rotate-6 transition-transform hover:scale-105 hover:z-30 duration-300">
+            <div className="flex items-center gap-3 mb-6 justify-center">
+              <div className="p-3 bg-black/10 rounded-full">
+                <Lightbulb className="w-6 h-6 text-black" />
               </div>
-
-              {/* Values Card - Right, Blue */}
-              <div className="absolute right-[10%] lg:right-[15%] top-1/2 -translate-y-1/2 w-80 lg:w-96 min-h-[400px] bg-sky-400 text-black rounded-3xl p-8 shadow-2xl transform rotate-6 transition-transform hover:scale-105 hover:z-30 duration-300">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="p-3 bg-black/10 rounded-full">
-                     <Handshake className="w-6 h-6 text-black" />
-                  </div>
-                  <h3 className="text-2xl font-bold">{t.values.title}</h3>
-                </div>
-                <ul className="space-y-3">
-                  {t.values.items.slice(0, 6).map((item, index) => (
-                    <li key={index} className="flex items-center gap-2 font-medium">
-                      <span className="w-2 h-2 bg-black rounded-full" />
-                      {item.title}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
+              <h3 className="text-3xl font-playfair font-bold">{t.vision.title}</h3>
             </div>
-          </section>
+            <div className="text-xl font-lora font-semibold leading-relaxed space-y-4 text-center">
+              <p>To be the number one recognized and reliable supplier of complete ranges of top quality yet affordable pharmaceuticals and medical supplies throughout the country.</p>
+              <p>To be one of the Best Regulatory and marketing Service providing Company in our region.</p>
+            </div>
+          </div>
+
+          {/* Mission Card - Center, Custom Gold, On Top */}
+          <div className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-80 lg:w-96 min-h-[400px] bg-[#CBB682] text-black rounded-3xl p-8 shadow-2xl transform rotate-2 z-20 transition-transform hover:scale-105 hover:z-30 duration-300">
+            <div className="flex items-center gap-3 mb-6 justify-center">
+              <div className="p-3 bg-black/10 rounded-full">
+                <Trophy className="w-6 h-6 text-black" />
+              </div>
+              <h3 className="text-3xl font-playfair font-bold">{t.mission.title}</h3>
+            </div>
+            <div className="text-xl font-lora font-semibold leading-relaxed text-center">
+              <p>To ethically import and distribute high-quality pharmaceuticals to address national shortages, while providing premier regulatory services. We are dedicated to ensuring product availability, achieving maximum client satisfaction, and being an exemplary corporate partner.</p>
+            </div>
+          </div>
+
+          {/* Values Card - Right, Custom Brown */}
+          <div className="absolute right-[10%] lg:right-[15%] top-1/2 -translate-y-1/2 w-80 lg:w-96 min-h-[400px] bg-[#A08C5B] text-black rounded-3xl p-8 shadow-2xl transform rotate-6 transition-transform hover:scale-105 hover:z-30 duration-300">
+            <div className="flex items-center gap-3 mb-6 justify-center">
+              <div className="p-3 bg-black/10 rounded-full">
+                <Handshake className="w-6 h-6 text-black" />
+              </div>
+              <h3 className="text-3xl font-playfair font-bold">{t.values.title}</h3>
+            </div>
+            <ul className="text-xl font-lora font-semibold leading-relaxed space-y-1 list-none p-0 text-center">
+              <li>Quality products and service</li>
+              <li>Partnership</li>
+              <li>Commitment</li>
+              <li>Continuous Learning</li>
+              <li>Integrity</li>
+              <li>Positive team spirit</li>
+              <li>Loyalty</li>
+              <li>Lending a hand to others</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
     </div>
   );
 }
+// Updated Values content and Vision font

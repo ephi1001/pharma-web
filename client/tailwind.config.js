@@ -6,6 +6,11 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        playfair: ['"Playfair Display"', 'serif'],
+        lora: ['"Lora"', 'serif'],
+        unifraktur: ['"UnifrakturMaguntia"', 'cursive'],
+      },
       animation: {
         'gradient-shift': 'gradient-shift 3s ease infinite',
       },
