@@ -1,10 +1,8 @@
- import { useState } from 'react';
-import { useLanguage } from '../contexts/LanguageContext';
+ import { useLanguage } from '../contexts/LanguageContext';
 import { Trophy, Handshake, Sparkles, Shield, Users, Lightbulb } from 'lucide-react';
 
 export default function About() {
   const { language } = useLanguage();
-  const [expandedCard, setExpandedCard] = useState(null);
 
   const content = {
     en: {
@@ -18,7 +16,11 @@ export default function About() {
       },
       vision: {
         title: 'Our Vision',
-        text: 'To be the global leader in pharmaceutical innovation, providing accessible, effective, and sustainable healthcare solutions that improve lives worldwide.'
+        text: 'To be the number one recognized and reliable supplier of complete ranges of top quality yet affordable pharmaceuticals and medical supplies throughout the country. To be one of the Best Regulatory and marketing Service providing Company in our region'
+      },
+      mission: {
+        title: 'Our Mission',
+        text: 'Import and distribute high-quality pharmaceutical products ethically throughout Ethiopia to address shortages. Provide regulatory services, market access, and technical representation. Contribute to national health policy through product availability. Understand client needs for maximum satisfaction. Be profitable and an exemplary public-private partner.'
       },
       whyChooseUs: {
         title: 'Why Choose Us?',
@@ -59,16 +61,36 @@ export default function About() {
         title: 'Our Values',
         items: [
           {
-            title: 'Excellence',
-            description: 'Committed to the highest standards in pharmaceutical development'
+            title: 'Quality products and service',
+            description: ''
           },
           {
-            title: 'Trust',
-            description: 'Building lasting relationships based on integrity and reliability'
+            title: 'partnership',
+            description: ''
           },
           {
-            title: 'Innovation',
-            description: 'Embracing cutting-edge technologies in healthcare solutions'
+            title: 'Commitment',
+            description: ''
+          },
+          {
+            title: 'Continues Learning',
+            description: ''
+          },
+          {
+            title: 'Integrity',
+            description: ''
+          },
+          {
+            title: 'Positive team spirit',
+            description: ''
+          },
+          {
+            title: 'Loyalty',
+            description: ''
+          },
+          {
+            title: 'Lending a hand to others',
+            description: ''
           }
         ]
       },
@@ -106,6 +128,14 @@ export default function About() {
           'ጉዞአችን የተጀመረው በሳይንሳዊ ግኝት እና በሚያገኝ የጤና አገልግሎት መካከል ያለውን ክፍተት ለመሙላት በሚል ነው። ዛሬ በባዮፋርማሲውቲካል ምርምር እና እድገት ውስጥ አንድ አንድ ነን።',
           'በአሥር ዓመታት ልምድ እና በዓለም አቀፍ ሳይንቲስቶች ቡድን በተለያዩ ሕክምናዊ ተግዳሮት አጠቃላይ መፍትሄዎችን እንሰጣለን።'
         ]
+      },
+      vision: {
+        title: 'የእኛ ራእይ',
+        text: 'በፋርማሲውቲካል ፈጠራ ውስጥ ዓለም አቀፍ አንድ አንድ ለመሆን ፣ የሚያገኝ ፣ የሚሰራ እና የሚያስተያዩ የጤና አገልግሎቶችን በመስጠት ሕይወቶችን በዓለም አቀፍ ለማሳደግ።'
+      },
+      mission: {
+        title: 'የእኛ ተልእኮ',
+        text: 'የተለያዩ ፋርማሲውቲካል መፍትሄዎችን በመስጠት የሕክምና አገልግሎትን ለማሳደግ ፣ የጤና እኩልነትን ለማሳደግ እና በዓለም አቀፍ ሕክምና እድገቶች ለመሳተፍ።'
       },
       expertise: {
         title: 'የስራ ብቃታችን',
@@ -183,147 +213,53 @@ export default function About() {
 
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-slate-50">
-
-      {/* Hero Section */}
-      <div className="relative bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 text-white py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
-                           radial-gradient(circle at 80% 80%, rgba(99, 102, 241, 0.1) 0%, transparent 50%)`
-        }}></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight">{t.hero.title}</h1>
-            <p className="text-xl md:text-2xl text-blue-100 font-light">
-              {t.hero.subtitle}
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Motto Section */}
-      <div className="py-16 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">{t.motto.title}</h2>
-          <p className="text-xl md:text-2xl font-light italic">{t.motto.text}</p>
-        </div>
-      </div>
-
-      {/* Vision Section */}
-      <div className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-8">{t.vision.title}</h2>
-            <p className="text-lg md:text-xl text-gray-700 leading-relaxed">{t.vision.text}</p>
-          </div>
-        </div>
-      </div>
-
-      <div className="container mx-auto px-4 py-16">
-        <div className="max-w-6xl mx-auto">
-          {/* Story Section */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
-            <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
-              <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4">
-                  <span className="text-2xl">📖</span>
-                </div>
-                <h2 className="text-3xl font-bold text-gray-800">{t.story.title}</h2>
-              </div>
-              <div className="space-y-4 text-gray-600 leading-relaxed">
-                {t.story.paragraphs.map((para, index) => (
-                  <p key={index}>{para}</p>
-                ))}
-              </div>
-            </div>
-
-            <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
-              <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center mr-4">
-                  <span className="text-2xl">🧬</span>
-                </div>
-                <h2 className="text-3xl font-bold text-gray-800">{t.expertise.title}</h2>
-              </div>
-              <ul className="space-y-4">
-                {t.expertise.items.map((item, index) => (
-                  <li key={index} className="flex items-start group">
-                    <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mr-3 mt-0.5 group-hover:bg-blue-600 transition-colors duration-300">
-                      <svg className="w-3 h-3 text-blue-600 group-hover:text-white transition-colors duration-300" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <span className="text-gray-600 flex-1">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          {/* Why Choose Us Section */}
-          <div className="bg-white rounded-2xl shadow-lg p-8 mb-20 hover:shadow-xl transition-shadow duration-300">
-            <h2 className="text-3xl font-bold text-black text-center mb-8">{t.whyChooseUs.title}</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {t.whyChooseUs.items.map((item, index) => {
-                const icons = [<Shield size={32} />, <Users size={32} />, <Lightbulb size={32} />];
-                const gradients = [
-                  'from-blue-500 to-cyan-400',
-                  'from-teal-500 to-green-400',
-                  'from-purple-500 to-blue-400'
-                ];
-                const isExpanded = expandedCard === index;
-
-                return (
-                  <div
-                    key={index}
-                    onClick={() => setExpandedCard(isExpanded ? null : index)}
-                    className={`bg-gradient-to-br from-slate-50 to-blue-50 rounded-xl p-6 hover:shadow-lg transition-all duration-300 cursor-pointer hover:transform hover:scale-105 border-2 ${
-                      isExpanded ? 'border-blue-500 shadow-lg' : 'border-transparent'
-                    }`}
-                  >
-                    <div className={`w-16 h-16 bg-gradient-to-br ${gradients[index]} rounded-xl flex items-center justify-center text-white mb-4 mx-auto shadow-md`}>
-                      {icons[index]}
-                    </div>
-                    <h3 className={`mb-3 text-center transition-all duration-300 text-lg ${isExpanded ? 'text-blue-900 font-bold' : 'text-gray-700 font-semibold'}`}>
-                      {item.title}
-                    </h3>
-                    <p className={`text-gray-600 leading-relaxed text-center text-sm transition-all duration-300 ${
-                      isExpanded ? 'line-clamp-none' : 'line-clamp-3'
-                    }`}>
-                      {item.description}
-                    </p>
-                    <div className="text-center mt-3">
-                      <span className="text-blue-600 font-medium text-xs">
-                        {isExpanded ? '▲ Click to collapse' : '▼ Click to expand'}
-                      </span>
-                    </div>
+    <div className="h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-slate-50">
+          <section className="relative h-screen flex flex-col items-center justify-center overflow-hidden">
+            <h2 className="text-4xl font-bold text-white mb-20 z-10 p-4 bg-black/30 rounded-lg backdrop-blur-sm">Our Core Identity</h2>
+            <div id="card-area" className="relative w-full max-w-7xl h-full flex items-center justify-center">
+              
+              {/* Vision Card - Left, Red */}
+              <div className="absolute left-[10%] lg:left-[15%] top-1/2 -translate-y-1/2 w-80 lg:w-96 min-h-[400px] bg-rose-500 text-white rounded-3xl p-8 shadow-2xl transform -rotate-6 transition-transform hover:scale-105 hover:z-30 duration-300">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="p-3 bg-white/20 rounded-full">
+                     <Lightbulb className="w-6 h-6 text-white" />
                   </div>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* Stats Section */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-20">
-            {t.stats.map((stat, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition-shadow duration-300">
-                <div className="text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
-                <div className="text-gray-600 text-sm font-medium">{stat.label}</div>
+                  <h3 className="text-2xl font-bold">{t.vision.title}</h3>
+                </div>
+                <p className="text-lg leading-relaxed font-medium">{t.vision.text}</p>
               </div>
-            ))}
-          </div>
 
-          {/* CTA Section */}
-          <div className="bg-gradient-to-r from-slate-900 to-slate-800 rounded-3xl shadow-2xl p-12 text-center text-white">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8">{t.cta.title}</h2>
-            <a href="/contact">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:transform hover:scale-105 shadow-lg">
-                {t.cta.button}
-              </button>
-            </a>
-          </div>
-        </div>
-      </div>
+              {/* Mission Card - Center, Yellow, On Top */}
+              <div className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-80 lg:w-96 min-h-[400px] bg-amber-400 text-black rounded-3xl p-8 shadow-2xl transform rotate-2 z-20 transition-transform hover:scale-105 hover:z-30 duration-300">
+                 <div className="flex items-center gap-3 mb-6">
+                  <div className="p-3 bg-black/10 rounded-full">
+                     <Trophy className="w-6 h-6 text-black" />
+                  </div>
+                   <h3 className="text-2xl font-bold">{t.mission.title}</h3>
+                </div>
+                <p className="text-lg leading-relaxed font-medium">{t.mission.text}</p>
+              </div>
+
+              {/* Values Card - Right, Blue */}
+              <div className="absolute right-[10%] lg:right-[15%] top-1/2 -translate-y-1/2 w-80 lg:w-96 min-h-[400px] bg-sky-400 text-black rounded-3xl p-8 shadow-2xl transform rotate-6 transition-transform hover:scale-105 hover:z-30 duration-300">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="p-3 bg-black/10 rounded-full">
+                     <Handshake className="w-6 h-6 text-black" />
+                  </div>
+                  <h3 className="text-2xl font-bold">{t.values.title}</h3>
+                </div>
+                <ul className="space-y-3">
+                  {t.values.items.slice(0, 6).map((item, index) => (
+                    <li key={index} className="flex items-center gap-2 font-medium">
+                      <span className="w-2 h-2 bg-black rounded-full" />
+                      {item.title}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+            </div>
+          </section>
     </div>
   );
 }
