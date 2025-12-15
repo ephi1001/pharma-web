@@ -7,8 +7,8 @@ export default function About() {
   const content = {
     en: {
       about: {
-        title: "The Morya Legacy",
-        text: "Morya Pharma stands as a beacon of excellence in the global pharmaceutical landscape. Founded on the pillars of integrity and scientific innovation, we are dedicated to bridging global healthcare advancements with local accessibility. Our commitment goes beyond distribution; we are custodians of public health, ensuring that every product we deliver meets the highest international standards of safety and efficacy."
+        title: "About Morya Pharma",
+        text: "Morya Pharma was founded by two entrepreneurs with extensive experience in pharmaceuticals and marketing. We comply with all legal requirements set by Ethiopia's Ministry of Health, Food and Drug Administration, and Ministry of Trade. Our core business focuses on distribution, foreign company representation, and regulatory and marketing services. With proactive management and effective leadership, we meet growing customer needs and support Ethiopia's health sector development goals."
       },
       vision: {
         title: "Our Vision",
