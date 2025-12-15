@@ -1,294 +1,163 @@
 import { useLanguage } from '../contexts/LanguageContext';
-import { Trophy, Handshake, Sparkles, Shield, Users, Lightbulb } from 'lucide-react';
+import { Target, Heart, Scale, Crown, Star, ShieldCheck, Award, Globe } from 'lucide-react';
 
 export default function About() {
   const { language } = useLanguage();
 
   const content = {
     en: {
-      hero: {
-        title: 'About Morya Pharma',
-        subtitle: 'Advancing Healthcare Through Science and Innovation'
-      },
-      motto: {
-        title: 'Our Motto',
-        text: '"Innovation for a Healthier Tomorrow"'
+      about: {
+        title: "The Morya Legacy",
+        text: "Morya Pharma stands as a beacon of excellence in the global pharmaceutical landscape. Founded on the pillars of integrity and scientific innovation, we are dedicated to bridging global healthcare advancements with local accessibility. Our commitment goes beyond distribution; we are custodians of public health, ensuring that every product we deliver meets the highest international standards of safety and efficacy."
       },
       vision: {
-        title: 'Our Vision',
-        text: 'To be the number one recognized and reliable supplier of complete ranges of top quality yet affordable pharmaceuticals and medical supplies throughout the country. To be one of the Best Regulatory and marketing Service providing Company in our region'
-      },
-      history: {
-        title: 'Morya Pharma',
-        text: 'Morya Pharma founded by 2 entrepreneurs who have well experienced background of pharmaceutical and marketing profession. Our company fulfill all the legal requirements set by Ethiopian Ministry of Health (MOH), Ethiopian Food and Drug Administration (EFDA) and Ethiopian ministry of trade. Major area of our business focus is distribution, foreign company representation, regulatory and marketing service. Proactive management and effective leadership style are one of our most valued features that puts us at the forefront. Meeting the growing requirements of our customers and the health sector development goals of the government of Ethiopia is our core competence.'
+        title: "Our Vision",
+        text: "To be the undisputed world-class leader in pharmaceutical solutions, recognized globally for setting the gold standard in quality, affordability, and ethical service."
       },
       mission: {
-        title: 'Our Mission',
-        text: 'Import and distribute high-quality pharmaceutical products ethically throughout Ethiopia to address shortages. Provide regulatory services, market access, and technical representation. Contribute to national health policy through product availability. Understand client needs for maximum satisfaction. Be profitable and an exemplary public-private partner.'
-      },
-      whyChooseUs: {
-        title: 'Why Choose Us?',
-        items: [
-          {
-            title: 'Quality & Safety',
-            description: 'Ensuring the highest standards of quality, safety, and regulatory compliance in every product we deliver.'
-          },
-          {
-            title: 'Trusted Expertise',
-            description: 'Backed by experienced professionals dedicated to reliability, transparency, and patient well-being.'
-          },
-          {
-            title: 'Innovation & Research',
-            description: 'Driven by continuous research, advanced technology, and innovative solutions in pharmaceutical science.'
-          }
-        ]
-      },
-      story: {
-        title: 'Our Story',
-        paragraphs: [
-          'Founded in 2010, NovaCure Pharmaceuticals has been at the forefront of pharmaceutical innovation, developing cutting-edge therapies that improve patient outcomes worldwide.',
-          'Our journey began with a mission to bridge the gap between scientific discovery and accessible healthcare. Today, we are recognized as a leader in biopharmaceutical research and development.',
-          'With over a decade of experience and a team of world-class scientists, we provide comprehensive solutions that address complex medical challenges.'
-        ]
-      },
-      expertise: {
-        title: 'Our Expertise',
-        items: [
-          'Advanced drug discovery and development',
-          'Clinical trials and regulatory compliance',
-          'Biotechnology and AI-driven research',
-          'Global distribution and supply chain management',
-          'Quality assurance and GMP standards'
-        ]
+        title: "Our Mission",
+        text: "To revolutionize healthcare access by importing and distributing premium pharmaceutical products. We strive to empower communities through reliable medicine, expert regulatory services, and an unyielding dedication to improving quality of life."
       },
       values: {
-        title: 'Our Values',
+        title: "Core Values",
         items: [
-          {
-            title: 'Quality products and service',
-            description: ''
-          },
-          {
-            title: 'partnership',
-            description: ''
-          },
-          {
-            title: 'Commitment',
-            description: ''
-          },
-          {
-            title: 'Continues Learning',
-            description: ''
-          },
-          {
-            title: 'Integrity',
-            description: ''
-          },
-          {
-            title: 'Positive team spirit',
-            description: ''
-          },
-          {
-            title: 'Loyalty',
-            description: ''
-          },
-          {
-            title: 'Lending a hand to others',
-            description: ''
-          }
+          "Global Excellence",
+          "Unwavering Integrity",
+          "Scientific Innovation",
+          "Compassionate Care",
+          "Trusted Partnership"
         ]
-      },
-      stats: [
-        { number: '10+', label: 'Years Experience' },
-        { number: '500+', label: 'Satisfied Clients' },
-        { number: '50+', label: 'Countries Served' }
-      ],
-      team: {
-        title: 'Meet Our Leadership',
-        subtitle: 'Our team of dedicated professionals brings together decades of experience in pharmaceuticals.',
-        members: [
-          {
-            name: 'Dr. Sarah Johnson',
-            role: 'CEO & Chief Scientist',
-            description: 'Leading NovaCure with expertise in pharmaceutical research and strategic vision.',
-            expertise: ['Drug Development', 'Clinical Research', 'Regulatory Affairs']
-          }
-        ]
-      },
-      cta: {
-        title: 'Ready to Partner with Us?',
-        button: 'Get in Touch'
       }
     },
     am: {
-      hero: {
-        title: 'ስለ ኖቫኩር ፋርማሲውቲካልስ',
-        subtitle: 'በሳይንስ እና ፈጠራ ለማሳደግ የጤና አገልግሎት'
-      },
-      story: {
-        title: 'ታሪካችን',
-        paragraphs: [
-          'በ2010 ዓ.ም የተመሰረተው ኖቫኩር ፋርማሲውቲካልስ በፋርማሲውቲካል ፈጠራ ግንባር ቀደም በመሆን የተለያዩ ሕክምናዎችን የሚያሳድጉ የተለያዩ ሕክምናዎችን አድጎታል።',
-          'ጉዞአችን የተጀመረው በሳይንሳዊ ግኝት እና በሚያገኝ የጤና አገልግሎት መካከል ያለውን ክፍተት ለመሙላት በሚል ነው። ዛሬ በባዮፋርማሲውቲካል ምርምር እና እድገት ውስጥ አንድ አንድ ነን።',
-          'በአሥር ዓመታት ልምድ እና በዓለም አቀፍ ሳይንቲስቶች ቡድን በተለያዩ ሕክምናዊ ተግዳሮት አጠቃላይ መፍትሄዎችን እንሰጣለን።'
-        ]
+      about: {
+        title: "ስለ ሞርያ ፋርማ",
+        text: "ሞርያ ፋርማ በፋርማሲዩቲካል ዓለም ውስጥ የታላቅነት ምልክት ነው። በታማኝነት እና በሳይንሳዊ ፈጠራ መሰረት የተመሰረተን፣ ዓለም አቀፍ የጤና እድገቶችን ከአካባቢያዊ ተደራሽነት ጋር ለማገናኘት ቆርጠን ተነስተናል።"
       },
       vision: {
-        title: 'የእኛ ራእይ',
-        text: 'በፋርማሲውቲካል ፈጠራ ውስጥ ዓለም አቀፍ አንድ አንድ ለመሆን ፣ የሚያገኝ ፣ የሚሰራ እና የሚያስተያዩ የጤና አገልግሎቶችን በመስጠት ሕይወቶችን በዓለም አቀፍ ለማሳደግ።'
-      },
-      history: {
-        title: 'የኩባንያ ታሪክ',
-        text: 'በ2010 የተመሰረተው ኤቢአር ፋርማ በሳይንሳዊ ግኝት እና ተደራሽ የጤና እንክብካቤ መካከል ያለውን ክፍተት ለመድፈን በተልዕኮ ተጀመረ። ባለፉት አስርት ዓመታት ውስጥ ለጥራት፣ ለፈጠራ እና ለሥነ ምግባራዊ ስርጭት ባለን ቁርጠኝነት የምንታወቅ ግንባር ቀደም አቅራቢ ሆነናል።'
+        title: "ራዕያችን",
+        text: "በጥራት፣ በተመጣጣኝ ዋጋ እና በሥነ-ምግባር አገልግሎት ወርቃማ ደረጃን በማውጣት በዓለም አቀፍ ደረጃ የሚታወቅ የፋርማሲዩቲካል መፍትሄዎች መሪ መሆን።"
       },
       mission: {
-        title: 'የእኛ ተልእኮ',
-        text: 'የተለያዩ ፋርማሲውቲካል መፍትሄዎችን በመስጠት የሕክምና አገልግሎትን ለማሳደግ ፣ የጤና እኩልነትን ለማሳደግ እና በዓለም አቀፍ ሕክምና እድገቶች ለመሳተፍ።'
-      },
-      expertise: {
-        title: 'የስራ ብቃታችን',
-        items: [
-          'የላቀ የሕክምና ግኝት እና እድገት',
-          'ክሊኒካል ሙከራዎች እና የምርመራ ተለያይነት',
-          'ባዮቴክኖሎጂ እና ኤአይ ምርምር',
-          'ዓለም አቀፍ ስርጭት እና የሰፊያ ሥርዓት አስተያየት',
-          'የጥሩ ሁኔታ ማረጋገጫ እና ጂኤምፒ ደረጃዎች'
-        ]
-      },
-      whyChooseUs: {
-        title: 'ለምን እኛን ይመርጣሉ?',
-        items: [
-          {
-            title: 'ዓለም አቀፍ ስራ ብቃት',
-            description: 'በፋርማሲውቲካል ምርምር እና እድገት ከአሥር ዓመታት በላይ ልምድ በ50+ አገሮች ላይ።'
-          },
-          {
-            title: 'የተለያዩ ቴክኖሎጂ',
-            description: 'ኤአይ ምርምር፣ ባዮቴክኖሎጂ እና የላቀ ክሊኒካል ሙከራዎችን ለተለያዩ ሕክምናዎች በመስራት።'
-          },
-          {
-            title: 'የጥሩ ሁኔታ ማረጋገጫ',
-            description: 'ጂኤምፒ የተረጋገጡ ቦታዎች በሁሉም ምርቶቻችን ውስጥ የተለያዩ ደረጃዎችን የሚያረጋግጡ።'
-          },
-          {
-            title: 'የተለያዩ አቀራረብ አቀራረብ',
-            description: 'እያንዳንዱ ሕክምና በተለያዩ ውጤቶች እና የሕይወት ጥሩ ሁኔታ እንደ ዋና ትኩረት ተሰማራ።'
-          }
-        ]
+        title: "ተልዕኳችን",
+        text: "ፕሪሚየም የፋርማሲዩቲካል ምርቶችን በማስመጣት እና በማሰራጨት የጤና አጠባበቅ ተደራሽነትን ማሻሻል።"
       },
       values: {
-        title: 'የእኛ ዋና እሴቶች',
+        title: "እሴቶቻችን",
         items: [
-          {
-            title: 'ብቃት',
-            description: 'በፋርማሲውቲካል እድገት ውስጥ ከፍተኛ ደረጃዎችን ለማሟላት ቆርጥ መሆናችን'
-          },
-          {
-            title: 'መተማመን',
-            description: 'በታማኝነት እና በአስተማማኝነት ላይ የተመሰረቱ ዘላቂ ግንኙነቶችን መገንባት'
-          },
-          {
-            title: 'ፈጠራ',
-            description: 'በጤና አገልግሎቶች ውስጥ የተለያዩ ቴክኖሎጂዎችን ስለምናቀብል'
-          }
+          "ዓለም አቀፍ ብቃት",
+          "ታማኝነት",
+          "ሳይንሳዊ ፈጠራ",
+          "ርህራሄ",
+          "ታማኝ አጋርነት"
         ]
-      },
-      stats: [
-        { number: '10+', label: 'ዓመታት ልምድ' },
-        { number: '500+', label: 'የተለያዩ ደንበኞች' },
-        { number: '50+', label: 'የተገለገሉ አገሮች' }
-      ],
-      team: {
-        title: 'አመራሮቻችንን ያውቁ',
-        subtitle: 'የእኛ የተወደዱ ባለሙያዎች ቡድን በፋርማሲውቲካል ውስጥ በአሥርተ ዓመታት ልምድ አንድ ላይ ያመጣል።',
-        members: [
-          {
-            name: 'ዶ/ር ሳራ ጆንሰን',
-            role: 'ዋና ሥራ አስፈፃሚ እና ዋና ሳይንቲስት',
-            description: 'በፋርማሲውቲካል ምርምር ብቃት እና ስትራቴጂክ ራእይ ኖቫኩርን እየመራ።',
-            expertise: ['የሕክምና ግኝት', 'ክሊኒካል ምርምር', 'የምርመራ ጉዳዮች']
-          }
-        ]
-      },
-      cta: {
-        title: 'ከእኛ ጋር ለመስራት ዝግጁ ነዎት?',
-        button: 'ያግኙን'
       }
     }
   };
 
-  const t = content[language];
-
+  const t = content[language] || content['en'];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-slate-50">
-      <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
-        <h2 className="text-4xl font-bold text-white mb-20 z-10 p-4 bg-black/30 rounded-lg backdrop-blur-sm">Our Core Identity</h2>
-        <div id="card-area" className="relative w-full max-w-7xl h-full flex flex-col lg:flex-row flex-wrap items-center justify-center gap-6 py-10 lg:py-20">
+    <div className="relative w-full py-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-b from-slate-50 to-white">
+      {/* Background Decorative Elements */}
+      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#DBC498]/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
+      <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-blue-900/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2 pointer-events-none"></div>
 
-          {/* History Card - New Card */}
-          <div className="w-full max-w-sm lg:w-80 min-h-[400px] bg-white/80 backdrop-blur-md border border-[#DBC498] text-gray-900 rounded-3xl p-8 shadow-xl transform transition-transform hover:scale-105 duration-300 flex flex-col items-center">
-            <div className="flex items-center gap-3 mb-6 justify-center w-full border-b border-[#DBC498]/20 pb-4">
-              <div className="p-3 bg-[#DBC498]/20 rounded-full">
-                <Sparkles className="w-6 h-6 text-[#9A7B4F]" />
-              </div>
-              <h3 className="text-2xl font-playfair font-bold text-[#5C4D35]">{t.history.title}</h3>
+      <div className="max-w-7xl mx-auto relative z-10">
+
+        {/* Main Header / About Section */}
+        <div className="text-center mb-24 animate-fade-in-up">
+          <div className="flex justify-center mb-6">
+            <div className="p-4 bg-[#DBC498]/10 rounded-full border border-[#DBC498]/20">
+              <Crown className="w-10 h-10 text-[#B89865]" />
             </div>
-            <div className="text-base font-lora font-medium leading-normal space-y-4 text-center text-gray-700">
-              <p>{t.history.text}</p>
+          </div>
+          <h2 className="text-5xl md:text-7xl font-playfair font-bold text-slate-800 mb-8 tracking-tight">
+            {t.about.title}
+          </h2>
+          <div className="w-32 h-[2px] bg-gradient-to-r from-transparent via-[#DBC498] to-transparent mx-auto mb-10"></div>
+          <p className="max-w-4xl mx-auto text-xl md:text-2xl font-lora text-slate-600 leading-relaxed font-light">
+            {t.about.text}
+          </p>
+        </div>
+
+        {/* Cards Section - Editorial Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+
+          {/* Vision Card - Light & Elegant */}
+          <div className="group relative p-10 bg-white shadow-[0_15px_30px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_25px_50px_-12px_rgba(184,152,101,0.15)] rounded-3xl border border-slate-100 transition-all duration-700 hover:-translate-y-2 overflow-hidden flex flex-col">
+            <div className="absolute top-0 left-0 w-1 h-full bg-[#DBC498] group-hover:w-2 transition-all duration-300"></div>
+            <div className="absolute -right-10 -top-10 text-slate-50 opacity-50 transform rotate-12 group-hover:rotate-45 transition-transform duration-700">
+              <Globe size={200} strokeWidth={0.5} />
+            </div>
+
+            <div className="relative z-10">
+              <div className="flex items-center gap-4 mb-8">
+                <div className="w-16 h-16 bg-[#F3E5AB]/20 rounded-2xl flex items-center justify-center rotate-3 group-hover:rotate-0 transition-all duration-500">
+                  <Award className="w-8 h-8 text-[#B89865]" />
+                </div>
+              </div>
+
+              <h3 className="text-3xl font-playfair font-bold text-slate-800 mb-6">{t.vision.title}</h3>
+              <p className="font-lora text-slate-600 leading-relaxed text-lg italic opacity-90">
+                "{t.vision.text}"
+              </p>
             </div>
           </div>
 
-          {/* Vision Card */}
-          <div className="w-full max-w-sm lg:w-80 min-h-[400px] bg-white/80 backdrop-blur-md border border-[#CBB682] text-gray-900 rounded-3xl p-8 shadow-xl transform transition-transform hover:scale-105 duration-300 flex flex-col items-center">
-            <div className="flex items-center gap-3 mb-6 justify-center w-full border-b border-[#CBB682]/20 pb-4">
-              <div className="p-3 bg-[#CBB682]/20 rounded-full">
-                <Lightbulb className="w-6 h-6 text-[#8C7644]" />
-              </div>
-              <h3 className="text-2xl font-playfair font-bold text-[#5C4D35]">{t.vision.title}</h3>
+          {/* Mission Card - Dark & Bold (Centerpiece) */}
+          <div className="group relative p-10 bg-slate-900 shadow-[0_20px_40px_-10px_rgba(15,23,42,0.5)] hover:shadow-[0_25px_60px_-10px_rgba(15,23,42,0.6)] rounded-3xl border border-slate-800 transition-all duration-700 hover:-translate-y-3 overflow-hidden text-white lg:scale-105 z-20 flex flex-col justify-between">
+            <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[#DBC498] to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-900 to-[#DBC498]/10 opacity-50"></div>
+            <div className="absolute -right-5 -bottom-5 text-white opacity-5">
+              <Target size={180} strokeWidth={1} />
             </div>
-            <div className="text-lg font-lora font-medium leading-relaxed space-y-4 text-center text-gray-700">
-              <p>To be the number one recognized and reliable supplier of complete ranges of top quality yet affordable pharmaceuticals and medical supplies throughout the country.</p>
-              <p>To be one of the Best Regulatory and marketing Service providing Company in our region.</p>
+
+            <div className="relative z-10">
+              <div className="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center mb-8 border border-white/10 backdrop-blur-sm group-hover:bg-white/10 transition-colors">
+                <Star className="w-8 h-8 text-[#F3E5AB]" />
+              </div>
+              <h3 className="text-3xl font-playfair font-bold text-white mb-6 tracking-wide">{t.mission.title}</h3>
+              <p className="font-lora text-slate-300 leading-relaxed text-lg font-light">
+                {t.mission.text}
+              </p>
+            </div>
+
+            <div className="relative z-10 mt-8 pt-6 border-t border-white/10 flex items-center gap-3">
+              <span className="h-[1px] w-8 bg-[#DBC498]"></span>
+              <span className="text-[#DBC498] text-sm uppercase tracking-widest font-medium">Morya Promise</span>
             </div>
           </div>
 
-          {/* Mission Card */}
-          <div className="w-full max-w-sm lg:w-80 min-h-[400px] bg-white/80 backdrop-blur-md border border-[#A08C5B] text-gray-900 rounded-3xl p-8 shadow-xl transform transition-transform hover:scale-105 duration-300 flex flex-col items-center">
-            <div className="flex items-center gap-3 mb-6 justify-center w-full border-b border-[#A08C5B]/20 pb-4">
-              <div className="p-3 bg-[#A08C5B]/20 rounded-full">
-                <Trophy className="w-6 h-6 text-[#756238]" />
-              </div>
-              <h3 className="text-2xl font-playfair font-bold text-[#5C4D35]">{t.mission.title}</h3>
+          {/* Values Card - Clean List */}
+          <div className="group relative p-10 bg-white shadow-[0_15px_30px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_25px_50px_-12px_rgba(184,152,101,0.15)] rounded-3xl border border-slate-100 transition-all duration-700 hover:-translate-y-2 overflow-hidden flex flex-col">
+            <div className="absolute top-0 right-0 w-1 h-full bg-[#DBC498] group-hover:w-2 transition-all duration-300"></div>
+            <div className="absolute -left-10 -bottom-10 text-slate-50 opacity-50 transform -rotate-12 group-hover:rotate-0 transition-transform duration-700">
+              <Heart size={200} strokeWidth={0.5} />
             </div>
-            <div className="text-lg font-lora font-medium leading-relaxed text-center text-gray-700">
-              <p>To ethically import and distribute high-quality pharmaceuticals to address national shortages, while providing premier regulatory services. We are dedicated to ensuring product availability, achieving maximum client satisfaction, and being an exemplary corporate partner.</p>
-            </div>
-          </div>
 
-          {/* Values Card */}
-          <div className="w-full max-w-sm lg:w-80 min-h-[400px] bg-white/80 backdrop-blur-md border border-[#DBC498] text-gray-900 rounded-3xl p-8 shadow-xl transform transition-transform hover:scale-105 duration-300 flex flex-col items-center">
-            <div className="flex items-center gap-3 mb-6 justify-center w-full border-b border-[#DBC498]/20 pb-4">
-              <div className="p-3 bg-[#DBC498]/20 rounded-full">
-                <Handshake className="w-6 h-6 text-[#9A7B4F]" />
+            <div className="relative z-10 h-full">
+              <div className="flex items-center gap-4 mb-8">
+                <div className="w-16 h-16 bg-[#F3E5AB]/20 rounded-2xl flex items-center justify-center -rotate-3 group-hover:rotate-0 transition-all duration-500">
+                  <ShieldCheck className="w-8 h-8 text-[#B89865]" />
+                </div>
               </div>
-              <h3 className="text-2xl font-playfair font-bold text-[#5C4D35]">{t.values.title}</h3>
+
+              <h3 className="text-3xl font-playfair font-bold text-slate-800 mb-8">{t.values.title}</h3>
+
+              <ul className="space-y-5 font-lora text-slate-600">
+                {t.values.items.map((item, idx) => (
+                  <li key={idx} className="flex items-center gap-4 group/item">
+                    <span className="w-2 h-2 rounded-full bg-[#DBC498] group-hover/item:scale-150 transition-transform duration-300"></span>
+                    <span className="text-lg font-medium group-hover/item:text-[#B89865] transition-colors duration-300">{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <ul className="text-lg font-lora font-medium leading-relaxed space-y-1 list-none p-0 text-center text-gray-700">
-              <li>Quality products and service</li>
-              <li>Partnership</li>
-              <li>Commitment</li>
-              <li>Continuous Learning</li>
-              <li>Integrity</li>
-              <li>Positive team spirit</li>
-              <li>Loyalty</li>
-              <li>Lending a hand to others</li>
-            </ul>
           </div>
 
         </div>
-      </section>
+      </div>
     </div>
   );
 }
-// Updated Values content and Vision font

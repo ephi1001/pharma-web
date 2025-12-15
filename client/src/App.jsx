@@ -4,9 +4,9 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Contact from './components/Contact';
 import About from './components/About';
-import img1 from './assets/pictures/photo_2025-12-11_17-59-31.jpg';
-import img2 from './assets/pictures/photo_2025-12-11_17-43-59.jpg';
-import img3 from './assets/pictures/photo_2025-12-11_17-47-56.jpg';
+import novatherapyImg from './assets/pictures/photo_2025-12-11_17-39-14.jpg';
+import bioshieldImg from './assets/pictures/bioshield.png';
+import neurocureImg from './assets/pictures/neurocure.png';
 import img4 from './assets/pictures/photo_2025-12-11_05-43-21.jpg';
 import img5 from './assets/pictures/photo_2025-12-11_17-35-04.jpg';
 import img6 from './assets/pictures/photo_2025-12-11_17-37-06.jpg';
@@ -81,105 +81,138 @@ export default function App() {
 
       {/* Hero Section */}
       <header id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0">
-          <img src={modernBg} alt="ABR Pharma Background" className="w-full h-full object-cover" />
-          {/* Dark Blue Overlay - Matching Contact Us */}
-          <div className="absolute inset-0 bg-blue-950/90 mix-blend-multiply"></div>
-          {/* Decorative Elements matching reference vibe */}
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-500/10 to-purple-500/10 mix-blend-overlay"></div>
+        {/* Background - Deep Royal Blue Theme with Breathing Animation */}
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          <img src={modernBg} alt="Background" className="w-full h-full object-cover animate-subtle-zoom" />
+          <div className="absolute inset-0 bg-blue-950/80 mix-blend-multiply"></div>
+          {/* Cinematic Vignette */}
+          <div className="absolute inset-0 bg-radial-gradient from-transparent via-blue-950/20 to-black/60"></div>
+          {/* Subtle Texture/Grain Overlay if possible - skipping for pure CSS cleanliness, but adding a gradient wash */}
+          <div className="absolute inset-0 bg-gradient-to-t from-blue-950 via-transparent to-blue-950/30"></div>
         </div>
 
-        {/* Content */}
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col items-center justify-center max-w-4xl mx-auto">
+        {/* Content Container */}
+        <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 text-center pt-10">
+          <div className="max-w-5xl mx-auto flex flex-col items-center">
 
-            {/* Text Content */}
-            <div className="text-center animate-fade-in-up">
-              <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-tight tracking-tight">
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-blue-100 to-blue-200">
-                  ABR Pharma
-                </span>
-              </h1>
-
-              <h2 className="text-2xl md:text-3xl font-bold text-blue-200 mb-6 font-playfair">
-                Advancing Healthcare Through Innovation
-              </h2>
-
-              <p className="text-lg md:text-xl text-gray-300 mb-10 leading-relaxed font-light px-4">
-                Your trusted partner in pharmaceutical excellence. We provide comprehensive solutions in designing, building, and maintaining professional healthcare supply chains for companies in the Pharmaceutical, Biotech, and MedTech sectors.
-              </p>
-
-              {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-5 justify-center">
-                <a
-                  href="#products"
-                  className="px-8 py-4 rounded-full font-bold text-white text-center transition-all duration-300 bg-gradient-to-r from-blue-600 to-cyan-500 hover:shadow-[0_0_30px_rgba(6,182,212,0.6)] hover:scale-105"
-                >
-                  Explore Products
-                </a>
-                <a
-                  href="#contact"
-                  className="px-8 py-4 rounded-full font-bold text-white text-center border-2 border-white/20 hover:bg-white/10 backdrop-blur-sm transition-all duration-300 hover:border-white/50"
-                >
-                  Contact Us
-                </a>
-              </div>
-
-              {/* Stats - Horizontal Strip */}
-              <div className="flex flex-wrap items-center justify-center gap-8 mt-12 pt-8 border-t border-white/10">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-white">10+</div>
-                  <div className="text-blue-300 text-xs uppercase tracking-wider">Years</div>
-                </div>
-                <div className="w-px h-10 bg-white/20 hidden md:block"></div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-white">500+</div>
-                  <div className="text-blue-300 text-xs uppercase tracking-wider">Clients</div>
-                </div>
-                <div className="w-px h-10 bg-white/20 hidden md:block"></div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-white">50+</div>
-                  <div className="text-blue-300 text-xs uppercase tracking-wider">Products</div>
-                </div>
-              </div>
-
+            {/* Crown/Star Element - Animated */}
+            <div className="mb-8 mt-12 animate-fade-in-up text-[#DBC498] animate-float-slow">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" className="drop-shadow-[0_0_15px_rgba(219,196,152,0.5)]">
+                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+              </svg>
             </div>
+
+            {/* Main Title - Luxurious Liquid Gold */}
+            <h1 className="text-6xl md:text-8xl lg:text-9xl font-playfair font-medium text-white tracking-tight leading-[1.1] mb-8 animate-fade-in-up delay-200">
+              The Art of <br />
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#C5A059] via-[#F3E5AB] to-[#C5A059] text-shimmer italic relative drop-shadow-lg">
+                Care & Science
+              </span>
+            </h1>
+
+            {/* Decor Line */}
+            <div className="w-32 h-[1px] bg-gradient-to-r from-transparent via-[#DBC498] to-transparent opacity-60 mb-10 animate-fade-in-up delay-300"></div>
+
+            {/* Subtitle - High-end Editorial Style */}
+            <p className="text-lg md:text-2xl text-blue-100/90 font-lora max-w-3xl mx-auto leading-relaxed font-light animate-fade-in-up delay-500 blur-[0.6px]">
+              Bridging the gap between global innovation and local well-being. <br className="hidden md:block" />
+              We deliver not just medicine, but the promise of a healthier future.
+            </p>
+
           </div>
         </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce opacity-70">
-          <a href="#products">
-            <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-            </svg>
-          </a>
+        {/* Elegant Scroll Indicator - Floating */}
+        <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-3 opacity-60 animate-bounce delay-700">
+          <span className="text-[10px] uppercase tracking-[0.3em] text-[#DBC498]">Explore</span>
+          <div className="w-[1px] h-16 bg-gradient-to-b from-[#DBC498] to-transparent"></div>
         </div>
       </header>
 
       {/* Products / Solutions */}
-      <section id="products" className="min-h-screen bg-gray-50 flex items-center">
-        <div className="container mx-auto px-4 w-full">
-          <h2 className="text-4xl font-bold text-center text-black mb-4">Products and Services</h2>
+      <section id="products" className="relative min-h-screen flex items-center py-20 overflow-hidden">
+        {/* Background Image & Overlay */}
+        <div className="absolute inset-0 z-0">
+          <img src={cityBg} alt="Background" className="w-full h-full object-cover blur-[2px]" />
+          <div className="absolute inset-0 bg-blue-950/90 mix-blend-multiply"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-blue-900/20 to-black/80"></div>
+        </div>
+
+        <div className="container mx-auto px-4 w-full relative z-10">
+          <div className="text-center mb-16 space-y-4">
+            <h2 className="text-4xl md:text-5xl font-playfair font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#C5A059] via-[#F3E5AB] to-[#C5A059] animate-fade-in shadow-gold filter drop-shadow-lg">
+              Products and Services
+            </h2>
+            <p className="text-blue-100/80 max-w-2xl mx-auto text-lg font-lora font-light">
+              Innovative pharmaceutical solutions crafted for global excellence.
+            </p>
+          </div>
+
           <div className="grid md:grid-cols-3 gap-8">
-            <div className={`bg-white p-6 rounded-lg shadow-md hover:shadow-2xl transition-all duration-300 cursor-pointer`} onClick={() => handleCardClick(3)}>
-              <img src={img1} alt="NovaTherapy" className="w-full h-48 object-cover mb-4 rounded transition-all duration-300 hover:scale-110 hover:shadow-xl hover:brightness-110" />
+            {/* Card 1 */}
+            <div className={`group relative p-4 rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-[#C5A059]/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#C5A059]/10 cursor-pointer`} onClick={() => handleCardClick(3)}>
+              <div className="absolute inset-0 bg-gradient-to-br from-[#C5A059]/10 via-transparent to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative z-10 overflow-hidden rounded-2xl bg-white">
+                <img src={novatherapyImg} alt="NovaTherapy" className="w-full h-64 object-cover transform transition-transform duration-700 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
+                  <span className="text-[#F3E5AB] font-playfair text-xl tracking-wide">NovaTherapy</span>
+                </div>
+              </div>
             </div>
-            <div className={`bg-white p-6 rounded-lg shadow-md hover:shadow-2xl transition-all duration-300 cursor-pointer`} onClick={() => handleCardClick(4)}>
-              <img src={img2} alt="BioShield Vaccine" className="w-full h-48 object-cover mb-4 rounded transition-all duration-300 hover:scale-110 hover:shadow-xl hover:brightness-110" />
+
+            {/* Card 2 */}
+            <div className={`group relative p-4 rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-[#C5A059]/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#C5A059]/10 cursor-pointer`} onClick={() => handleCardClick(4)}>
+              <div className="absolute inset-0 bg-gradient-to-br from-[#C5A059]/10 via-transparent to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative z-10 overflow-hidden rounded-2xl bg-white">
+                <img src={bioshieldImg} alt="BioShield Vaccine" className="w-full h-64 object-cover transform transition-transform duration-700 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
+                  <span className="text-[#F3E5AB] font-playfair text-xl tracking-wide">BioShield</span>
+                </div>
+              </div>
             </div>
-            <div className={`bg-white p-6 rounded-lg shadow-md hover:shadow-2xl transition-all duration-300 cursor-pointer`} onClick={() => handleCardClick(5)}>
-              <img src={img3} alt="NeuroCure" className="w-full h-48 object-cover mb-4 rounded transition-all duration-300 hover:scale-110 hover:shadow-xl hover:brightness-110" />
+
+            {/* Card 3 */}
+            <div className={`group relative p-4 rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-[#C5A059]/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#C5A059]/10 cursor-pointer`} onClick={() => handleCardClick(5)}>
+              <div className="absolute inset-0 bg-gradient-to-br from-[#C5A059]/10 via-transparent to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative z-10 overflow-hidden rounded-2xl bg-white">
+                <img src={neurocureImg} alt="NeuroCure" className="w-full h-64 object-cover transform transition-transform duration-700 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
+                  <span className="text-[#F3E5AB] font-playfair text-xl tracking-wide">NeuroCure</span>
+                </div>
+              </div>
             </div>
-            <div className={`bg-white p-6 rounded-lg shadow-md hover:shadow-2xl transition-all duration-300 cursor-pointer`} onClick={() => handleCardClick(6)}>
-              <img src={img4} alt="CardioGuard" className="w-full h-48 object-cover mb-4 rounded transition-all duration-300 hover:scale-110 hover:shadow-xl hover:brightness-110" />
+
+            {/* Card 4 */}
+            <div className={`group relative p-4 rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-[#C5A059]/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#C5A059]/10 cursor-pointer`} onClick={() => handleCardClick(6)}>
+              <div className="absolute inset-0 bg-gradient-to-br from-[#C5A059]/10 via-transparent to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative z-10 overflow-hidden rounded-2xl">
+                <img src={img4} alt="CardioGuard" className="w-full h-64 object-cover transform transition-transform duration-700 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
+                  <span className="text-[#F3E5AB] font-playfair text-xl tracking-wide">CardioGuard</span>
+                </div>
+              </div>
             </div>
-            <div className={`bg-white p-6 rounded-lg shadow-md hover:shadow-2xl transition-all duration-300 cursor-pointer`} onClick={() => handleCardClick(7)}>
-              <img src={img5} alt="ImmunoBoost" className="w-full h-48 object-cover mb-4 rounded transition-all duration-300 hover:scale-110 hover:shadow-xl hover:brightness-110" />
+
+            {/* Card 5 */}
+            <div className={`group relative p-4 rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-[#C5A059]/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#C5A059]/10 cursor-pointer`} onClick={() => handleCardClick(7)}>
+              <div className="absolute inset-0 bg-gradient-to-br from-[#C5A059]/10 via-transparent to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative z-10 overflow-hidden rounded-2xl">
+                <img src={img5} alt="ImmunoBoost" className="w-full h-64 object-cover transform transition-transform duration-700 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
+                  <span className="text-[#F3E5AB] font-playfair text-xl tracking-wide">ImmunoBoost</span>
+                </div>
+              </div>
             </div>
-            <div className={`bg-white p-6 rounded-lg shadow-md hover:shadow-2xl transition-all duration-300 cursor-pointer`} onClick={() => handleCardClick(8)}>
-              <img src={img6} alt="PainRelief Pro" className="w-full h-48 object-cover mb-4 rounded transition-all duration-300 hover:scale-110 hover:shadow-xl hover:brightness-110" />
+
+            {/* Card 6 */}
+            <div className={`group relative p-4 rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-[#C5A059]/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#C5A059]/10 cursor-pointer`} onClick={() => handleCardClick(8)}>
+              <div className="absolute inset-0 bg-gradient-to-br from-[#C5A059]/10 via-transparent to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative z-10 overflow-hidden rounded-2xl">
+                <img src={img6} alt="PainRelief Pro" className="w-full h-64 object-cover transform transition-transform duration-700 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
+                  <span className="text-[#F3E5AB] font-playfair text-xl tracking-wide">PainRelief Pro</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
