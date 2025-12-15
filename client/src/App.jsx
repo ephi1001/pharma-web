@@ -11,6 +11,9 @@ import img4 from './assets/pictures/photo_2025-12-11_05-43-21.jpg';
 import img5 from './assets/pictures/photo_2025-12-11_17-35-04.jpg';
 import img6 from './assets/pictures/photo_2025-12-11_17-37-06.jpg';
 import newImage from './assets/pictures/photo_2025-12-11_08-34-42.jpg';
+import logo from './assets/pictures/photo_2025-12-11_16-43-44.jpg';
+import cityBg from './assets/pictures/city_bg.jpg';
+import modernBg from './assets/pictures/modern_bg.jpg';
 
 export default function App() {
   const [selectedCard, setSelectedCard] = useState(null);
@@ -77,76 +80,76 @@ export default function App() {
       <Header />
 
       {/* Hero Section */}
-      <header id="hero" className="relative min-h-screen flex items-center">
+      <header id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
-          <img src={newImage} alt="ABR Pharma Background" className="w-full h-full object-cover" />
-          {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
+          <img src={modernBg} alt="ABR Pharma Background" className="w-full h-full object-cover" />
+          {/* Dark Blue Overlay - Matching Contact Us */}
+          <div className="absolute inset-0 bg-blue-950/90 mix-blend-multiply"></div>
+          {/* Decorative Elements matching reference vibe */}
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-500/10 to-purple-500/10 mix-blend-overlay"></div>
         </div>
 
         {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="max-w-3xl">
-            {/* Company Name with Icon */}
-            <div className="flex items-center mb-6 animate-fade-in">
-              <div className="w-16 h-16 rounded-xl flex items-center justify-center mr-4" style={{ background: 'linear-gradient(135deg, #06b6d4, #3b82f6)' }}>
-                <svg className="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-              </div>
-              <h1 className="text-5xl md:text-6xl font-bold text-white">
-                ABR Pharma
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col items-center justify-center max-w-4xl mx-auto">
+
+            {/* Text Content */}
+            <div className="text-center animate-fade-in-up">
+              <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-tight tracking-tight">
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-blue-100 to-blue-200">
+                  ABR Pharma
+                </span>
               </h1>
-            </div>
 
-            {/* Tagline */}
-            <h2 className="text-3xl md:text-4xl font-semibold text-white mb-6 animate-slide-up">
-              Advancing Healthcare Through Innovation
-            </h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-blue-200 mb-6 font-playfair">
+                Advancing Healthcare Through Innovation
+              </h2>
 
-            {/* Description */}
-            <p className="text-xl text-gray-200 mb-10 leading-relaxed animate-slide-up">
-              Your trusted partner for premium pharmaceutical products, medical equipment, and healthcare solutions. We deliver quality, safety, and excellence in every product we supply.
-            </p>
+              <p className="text-lg md:text-xl text-gray-300 mb-10 leading-relaxed font-light px-4">
+                Your trusted partner in pharmaceutical excellence. We provide comprehensive solutions in designing, building, and maintaining professional healthcare supply chains for companies in the Pharmaceutical, Biotech, and MedTech sectors.
+              </p>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-4 animate-slide-up">
-              <a
-                href="#products"
-                className="px-8 py-4 rounded-lg font-semibold text-white transition-all duration-300 hover:shadow-xl hover:scale-105"
-                style={{ background: 'linear-gradient(135deg, #06b6d4, #3b82f6)' }}
-              >
-                Explore Our Products
-              </a>
-              <a
-                href="#contact"
-                className="px-8 py-4 rounded-lg font-semibold text-white border-2 border-white hover:bg-white hover:text-gray-900 transition-all duration-300"
-              >
-                Contact Us
-              </a>
-            </div>
-
-            {/* Stats Section */}
-            <div className="grid grid-cols-3 gap-6 mt-16 animate-fade-in">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-white mb-2">10+</div>
-                <div className="text-gray-300 text-sm">Years Experience</div>
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-5 justify-center">
+                <a
+                  href="#products"
+                  className="px-8 py-4 rounded-full font-bold text-white text-center transition-all duration-300 bg-gradient-to-r from-blue-600 to-cyan-500 hover:shadow-[0_0_30px_rgba(6,182,212,0.6)] hover:scale-105"
+                >
+                  Explore Products
+                </a>
+                <a
+                  href="#contact"
+                  className="px-8 py-4 rounded-full font-bold text-white text-center border-2 border-white/20 hover:bg-white/10 backdrop-blur-sm transition-all duration-300 hover:border-white/50"
+                >
+                  Contact Us
+                </a>
               </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-white mb-2">500+</div>
-                <div className="text-gray-300 text-sm">Satisfied Clients</div>
+
+              {/* Stats - Horizontal Strip */}
+              <div className="flex flex-wrap items-center justify-center gap-8 mt-12 pt-8 border-t border-white/10">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-white">10+</div>
+                  <div className="text-blue-300 text-xs uppercase tracking-wider">Years</div>
+                </div>
+                <div className="w-px h-10 bg-white/20 hidden md:block"></div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-white">500+</div>
+                  <div className="text-blue-300 text-xs uppercase tracking-wider">Clients</div>
+                </div>
+                <div className="w-px h-10 bg-white/20 hidden md:block"></div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-white">50+</div>
+                  <div className="text-blue-300 text-xs uppercase tracking-wider">Products</div>
+                </div>
               </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-white mb-2">50+</div>
-                <div className="text-gray-300 text-sm">Products</div>
-              </div>
+
             </div>
           </div>
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce opacity-70">
           <a href="#products">
             <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
@@ -159,7 +162,6 @@ export default function App() {
       <section id="products" className="min-h-screen bg-gray-50 flex items-center">
         <div className="container mx-auto px-4 w-full">
           <h2 className="text-4xl font-bold text-center text-black mb-4">Products and Services</h2>
-          <p className="text-lg text-center text-gray-600 mb-12">Explore our comprehensive range of pharmaceutical products and professional services designed to meet your healthcare needs.</p>
           <div className="grid md:grid-cols-3 gap-8">
             <div className={`bg-white p-6 rounded-lg shadow-md hover:shadow-2xl transition-all duration-300 cursor-pointer`} onClick={() => handleCardClick(3)}>
               <img src={img1} alt="NovaTherapy" className="w-full h-48 object-cover mb-4 rounded transition-all duration-300 hover:scale-110 hover:shadow-xl hover:brightness-110" />
@@ -184,49 +186,87 @@ export default function App() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section id="why-choose-us" className="min-h-screen bg-gray-50 flex items-center">
-        <div className="container mx-auto px-4 w-full">
-          <div className="max-w-6xl mx-auto">
-            <div className="rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300" style={{ backgroundColor: '#CBB682' }}>
-              <h2 className="text-3xl font-bold text-black text-center mb-8">Why Choose Us?</h2>
+      <section id="why-choose-us" className="relative min-h-screen flex items-center py-20 overflow-hidden">
+        {/* Background Image & Overlay */}
+        <div className="absolute inset-0 z-0">
+          <img src={newImage} alt="Background" className="w-full h-full object-cover blur-[2px] scale-105" />
+          <div className="absolute inset-0 bg-blue-950/90 mix-blend-multiply"></div>
+          {/* Subtle animated gradient accent */}
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-80"></div>
+        </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="rounded-xl p-6 border-2 border-transparent hover:scale-105 hover:shadow-2xl hover:brightness-110 transition-all duration-300 cursor-pointer" style={{ backgroundColor: '#E9DBBD' }}>
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-400 rounded-xl flex items-center justify-center text-white mb-4 mx-auto shadow-md hover:shadow-lg transition-shadow duration-300">
-                    <Shield size={32} />
+        <div className="container mx-auto px-4 w-full relative z-10">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16 space-y-4">
+              <h2 className="text-4xl md:text-5xl font-playfair font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-yellow-400 to-amber-600 animate-fade-in">
+                Why Choose Us?
+              </h2>
+              <p className="text-gray-300 max-w-2xl mx-auto text-lg font-lora">
+                Dedicated to excellence, integrity, and innovation in every aspect of healthcare service.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* Card 1: Quality Product */}
+              <div className="group relative p-8 rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-amber-500/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-amber-500/10">
+                <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 via-transparent to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                <div className="relative z-10">
+                  <div className="w-20 h-20 mb-8 rounded-2xl bg-gradient-to-br from-amber-300 to-amber-600 p-[1px] transform group-hover:rotate-6 transition-transform duration-300">
+                    <div className="w-full h-full rounded-2xl bg-slate-900/90 flex items-center justify-center backdrop-blur-xl">
+                      <Shield className="w-10 h-10 text-amber-400 group-hover:scale-110 transition-transform duration-300" />
+                    </div>
                   </div>
-                  <h3 className="mb-3 text-center text-lg text-black font-semibold hover:font-bold transition-all duration-300">
+
+                  <h3 className="text-2xl font-playfair font-bold text-white mb-4 group-hover:text-amber-300 transition-colors">
                     Quality Product
                   </h3>
-                  <p className="text-black leading-relaxed text-center text-sm transition-colors duration-300">
+                  <p className="text-gray-300 font-lora leading-relaxed text-sm group-hover:text-white transition-colors">
                     Our GMP certified facilities produce high-quality pharmaceutical products that undergo rigorous quality control, meet global standards (FDA, EMA), and maintain full traceability from manufacturing to distribution.
                   </p>
                 </div>
+              </div>
 
-                <div className="rounded-xl p-6 border-2 border-transparent hover:scale-105 hover:shadow-2xl hover:brightness-110 transition-all duration-300 cursor-pointer" style={{ backgroundColor: '#E9DBBD' }}>
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-400 rounded-xl flex items-center justify-center text-white mb-4 mx-auto shadow-md hover:shadow-lg transition-shadow duration-300">
-                    <FileText size={32} />
+              {/* Card 2: Regulatory */}
+              <div className="group relative p-8 rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-amber-500/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-amber-500/10">
+                <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 via-transparent to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                <div className="relative z-10">
+                  <div className="w-20 h-20 mb-8 rounded-2xl bg-gradient-to-br from-amber-300 to-amber-600 p-[1px] transform group-hover:rotate-6 transition-transform duration-300">
+                    <div className="w-full h-full rounded-2xl bg-slate-900/90 flex items-center justify-center backdrop-blur-xl">
+                      <FileText className="w-10 h-10 text-amber-400 group-hover:scale-110 transition-transform duration-300" />
+                    </div>
                   </div>
-                  <h3 className="mb-3 text-center text-lg text-black font-semibold hover:font-bold transition-all duration-300">
-                    Regulatory and Marketing Service
+
+                  <h3 className="text-2xl font-playfair font-bold text-white mb-4 group-hover:text-amber-300 transition-colors">
+                    Regulatory Service
                   </h3>
-                  <p className="text-black leading-relaxed text-center text-sm transition-colors duration-300">
+                  <p className="text-gray-300 font-lora leading-relaxed text-sm group-hover:text-white transition-colors">
                     Expert regulatory affairs and marketing support for pharmaceutical products. We ensure compliance with global standards and provide strategic marketing solutions to enhance product visibility and distribution.
                   </p>
                 </div>
+              </div>
 
-                <div className="rounded-xl p-6 border-2 border-transparent hover:scale-105 hover:shadow-2xl hover:brightness-110 transition-all duration-300 cursor-pointer" style={{ backgroundColor: '#E9DBBD' }}>
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-400 rounded-xl flex items-center justify-center text-white mb-4 mx-auto shadow-md hover:shadow-lg transition-shadow duration-300">
-                    <DollarSign size={32} />
+              {/* Card 3: Affordable Price */}
+              <div className="group relative p-8 rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-amber-500/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-amber-500/10">
+                <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 via-transparent to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                <div className="relative z-10">
+                  <div className="w-20 h-20 mb-8 rounded-2xl bg-gradient-to-br from-amber-300 to-amber-600 p-[1px] transform group-hover:rotate-6 transition-transform duration-300">
+                    <div className="w-full h-full rounded-2xl bg-slate-900/90 flex items-center justify-center backdrop-blur-xl">
+                      <DollarSign className="w-10 h-10 text-amber-400 group-hover:scale-110 transition-transform duration-300" />
+                    </div>
                   </div>
-                  <h3 className="mb-3 text-center text-lg text-black font-semibold hover:font-bold transition-all duration-300">
+
+                  <h3 className="text-2xl font-playfair font-bold text-white mb-4 group-hover:text-amber-300 transition-colors">
                     Affordable Price
                   </h3>
-                  <p className="text-black leading-relaxed text-center text-sm transition-colors duration-300">
+                  <p className="text-gray-300 font-lora leading-relaxed text-sm group-hover:text-white transition-colors">
                     Competitive pricing that makes high-quality healthcare accessible to all. We offer cost-effective solutions without sacrificing efficacy, ensuring value for money in every product.
                   </p>
                 </div>
               </div>
+
             </div>
           </div>
         </div>

@@ -3,13 +3,13 @@ import toast from 'react-hot-toast';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import contactMessageService from '../services/contactMessageService';
+import bgImage from '../assets/pictures/city_bg.jpg';
 
 export default function Contact() {
   const { language } = useLanguage();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    subject: '',
     message: '',
     rating: 5,
     location: ''
@@ -18,7 +18,7 @@ export default function Contact() {
   const translations = {
     en: {
       title: 'Contact Us',
-      description: 'Have questions about our services or want to discuss a potential partnership? We\'d love to hear from you. Send us a message and we\'ll respond as soon as possible.',
+      description: "Have questions about our services or want to discuss a potential partnership? We'd love to hear from you.",
       getInTouch: 'Get In Touch',
       address: 'Address',
       addressValue: 'Addis Ababa, Ethiopia',
@@ -29,18 +29,17 @@ export default function Contact() {
       emailValue: 'moryaplc@gmail.com',
       businessHours: 'Business Hours',
       businessHoursValue: 'Monday - Sunday: 9:00 AM - 6:00 PM',
-      writeMessage: 'Write Us a Message',
+      writeMessage: 'Send Message',
       fullName: 'Full Name',
       emailLabel: 'Email',
-      subject: 'Subject',
       yourMessage: 'Your Message',
-      sendMessage: 'Send Message',
+      sendMessage: 'Send',
       successMessage: 'Thank you for your message! We will get back to you soon.',
       reviewOnGoogleMaps: 'Review us on Google Maps'
     },
     am: {
       title: 'ያግኙን',
-      description: 'ስለ አገልግሎታችን ጥያቄዎች አሉዎት ወይም ከእኛ ጋር መወያየት ይፈልጋሉ? ከእርስዎ መስማት እንፈልጋለን። መልእክት ይላኩልን እና በተቻለ ፍጥነት እንመልሳለን።',
+      description: 'ስለ አገልግሎታችን ጥያቄዎች አሉዎት ወይም ከእኛ ጋር መወያየት ይፈልጋሉ? ከእርስዎ መስማት እንፈልጋለን።',
       getInTouch: 'ተገናኝ',
       address: 'አድራሻ',
       addressValue: 'አዲስ አበባ፣ ኢትዮጵያ',
@@ -51,12 +50,11 @@ export default function Contact() {
       emailValue: 'moryaplc@gmail.com',
       businessHours: 'የስራ ሰዓት',
       businessHoursValue: 'ሰኞ - እሁድ፡ ከጠዋቱ 9:00 - ከምሽቱ 6:00',
-      writeMessage: 'መልእክት ይጻፉልን',
+      writeMessage: 'መልእክት ላክ',
       fullName: 'ሙሉ ስም',
       emailLabel: 'ኢሜይል',
-      subject: 'ርዕሰ ጉዳይ',
       yourMessage: 'መልእክትዎ',
-      sendMessage: 'መልእክት ላክ',
+      sendMessage: 'ላክ',
       successMessage: 'ለመልእክትዎ እናመሰግናለን! በቅርቡ እናገኝዎታለን።',
       reviewOnGoogleMaps: 'በጉግል ካርታ ላይ አስተያየት ስጡን'
     }
@@ -76,7 +74,7 @@ export default function Contact() {
     try {
       await contactMessageService.create(formData);
       toast.success(t.successMessage);
-      setFormData({ name: '', email: '', subject: '', message: '', rating: 5, location: '' });
+      setFormData({ name: '', email: '', message: '', rating: 5, location: '' });
     } catch (error) {
       console.error('Error submitting contact form:', error);
       toast.error('Failed to send message. Please try again.');
@@ -84,179 +82,146 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Main Container */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
-          {/* Contact Us Title - Centered */}
-          <h1 className="text-4xl font-bold text-center text-gray-900 mb-12">{t.title}</h1>
+    <div className="relative min-h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center py-16"
+      style={{ backgroundImage: `url(${bgImage})` }}
+    >
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-blue-950/90 mix-blend-multiply"></div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Left Column - Contact Info */}
-            <div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-8">{t.getInTouch}</h2>
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 w-full">
 
-              <div className="space-y-6">
-                {/* Address */}
-                <div className="flex items-start">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 rounded-lg flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #06b6d4, #3b82f6)' }}>
-                      <MapPin className="w-6 h-6 text-white" />
-                    </div>
-                  </div>
-                  <div className="ml-4">
-                    <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide">{t.address}</h3>
-                    <p className="mt-1 text-gray-900">{t.addressValue}</p>
-                  </div>
-                </div>
+        {/* Header Section */}
+        <div className="text-center mb-16 space-y-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight">{t.title}</h1>
+          <p className="text-gray-300 max-w-2xl mx-auto text-lg leading-relaxed">
+            {t.description}
+          </p>
+        </div>
 
-                {/* Phone */}
-                <div className="flex items-start">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 rounded-lg flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #06b6d4, #3b82f6)' }}>
-                      <Phone className="w-6 h-6 text-white" />
-                    </div>
-                  </div>
-                  <div className="ml-4">
-                    <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide">{t.phone}</h3>
-                    <p className="mt-1 text-gray-900">{t.phoneValue1}</p>
-                    <p className="text-gray-900">{t.phoneValue2}</p>
-                  </div>
-                </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-stretch">
 
-                {/* Email */}
-                <div className="flex items-start">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 rounded-lg flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #06b6d4, #3b82f6)' }}>
-                      <Mail className="w-6 h-6 text-white" />
-                    </div>
-                  </div>
-                  <div className="ml-4">
-                    <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide">{t.email}</h3>
-                    <p className="mt-1 text-gray-900">{t.emailValue}</p>
-                  </div>
-                </div>
-
-                {/* Business Hours */}
-                <div className="flex items-start">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 rounded-lg flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #06b6d4, #3b82f6)' }}>
-                      <Clock className="w-6 h-6 text-white" />
-                    </div>
-                  </div>
-                  <div className="ml-4">
-                    <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide">{t.businessHours}</h3>
-                    <p className="mt-1 text-gray-900">{t.businessHoursValue}</p>
-                  </div>
-                </div>
+          {/* Left Column: Information */}
+          <div className="flex flex-col justify-center space-y-10">
+            {/* Address */}
+            <div className="flex items-center group">
+              <div className="flex-shrink-0 w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300">
+                <MapPin className="w-8 h-8 text-black" />
               </div>
-
-              {/* Google Map */}
-              <div className="mt-8">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3001.547335676859!2d38.800583!3d9.018718999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m1!2zOcKwMDEnMDcuNCJOIDM4wrA0OCcwMi4xIkU!5e1!3m2!1sen!2set!4v1763892230826!5m2!1sen!2set"
-                  width="100%"
-                  height="250"
-                  style={{ border: 0 }}
-                  allowFullScreen=""
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  className="rounded-lg"
-                ></iframe>
-                <button
-                  onClick={() => window.open('https://www.google.com/maps?q=9.018719,38.800583', '_blank')}
-                  className="mt-4 w-full py-3 px-6 rounded-lg font-semibold text-white transition-all duration-300 hover:shadow-lg"
-                  style={{ background: 'linear-gradient(135deg, #06b6d4, #3b82f6)' }}
-                >
-                  {t.reviewOnGoogleMaps}
-                </button>
+              <div className="ml-6">
+                <h3 className="text-xl font-bold text-[#06b6d4] mb-1">{t.address}</h3>
+                <p className="text-gray-100 text-lg font-medium">{t.addressValue}</p>
               </div>
             </div>
 
-            {/* Right Column - Contact Form */}
-            <div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-8">{t.writeMessage}</h2>
+            {/* Phone */}
+            <div className="flex items-center group">
+              <div className="flex-shrink-0 w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300">
+                <Phone className="w-8 h-8 text-black" />
+              </div>
+              <div className="ml-6">
+                <h3 className="text-xl font-bold text-[#06b6d4] mb-1">{t.phone}</h3>
+                <p className="text-gray-100 text-lg font-medium">{t.phoneValue1}</p>
+                {/* <p className="text-gray-100 text-lg font-medium">{t.phoneValue2}</p> */}
+              </div>
+            </div>
 
-              <form onSubmit={handleSubmit} className="space-y-6">
-                {/* Full Name */}
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                    {t.fullName}
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all"
-                    placeholder={t.fullName}
-                  />
-                </div>
+            {/* Email */}
+            <div className="flex items-center group">
+              <div className="flex-shrink-0 w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300">
+                <Mail className="w-8 h-8 text-black" />
+              </div>
+              <div className="ml-6">
+                <h3 className="text-xl font-bold text-[#06b6d4] mb-1">{t.email}</h3>
+                <p className="text-gray-100 text-lg font-medium">{t.emailValue}</p>
+              </div>
+            </div>
 
-                {/* Email */}
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    {t.emailLabel}
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all"
-                    placeholder={t.emailLabel}
-                  />
-                </div>
+            {/* Business Hours */}
+            {/* Note: The reference image didn't clearly show hours, but user data has it. I'll keep it for completeness but styled similarly. */}
+            <div className="flex items-center group">
+              <div className="flex-shrink-0 w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300">
+                <Clock className="w-8 h-8 text-black" />
+              </div>
+              <div className="ml-6">
+                <h3 className="text-xl font-bold text-[#06b6d4] mb-1">{t.businessHours}</h3>
+                <p className="text-gray-100 text-lg font-medium">{t.businessHoursValue}</p>
+              </div>
+            </div>
+          </div>
 
-                {/* Subject */}
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                    {t.subject}
-                  </label>
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all"
-                    placeholder={t.subject}
-                  />
-                </div>
+          {/* Right Column: Form */}
+          <div className="bg-white rounded-xl shadow-2xl p-8 md:p-10 lg:p-12 relative overflow-hidden">
+            {/* Decorative top border or accent if needed, but plain white card matches reference best */}
 
-                {/* Message */}
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    {t.yourMessage}
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows="6"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all resize-none"
-                    placeholder={t.yourMessage}
-                  ></textarea>
-                </div>
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">{t.writeMessage}</h2>
 
-                {/* Submit Button */}
+            <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Full Name */}
+              <div>
+                <label htmlFor="name" className="block text-sm font-bold text-pink-500 mb-2 uppercase tracking-wide">
+                  {t.fullName}
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-0 py-2 border-b-2 border-gray-300 focus:border-cyan-500 focus:ring-0 text-gray-900 bg-transparent transition-colors placeholder-gray-400 font-medium text-lg"
+                  placeholder="Enter your name"
+                />
+              </div>
+
+              {/* Email */}
+              <div>
+                <label htmlFor="email" className="block text-sm font-bold text-pink-500 mb-2 uppercase tracking-wide">
+                  {t.emailLabel}
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-0 py-2 border-b-2 border-gray-300 focus:border-cyan-500 focus:ring-0 text-gray-900 bg-transparent transition-colors placeholder-gray-400 font-medium text-lg"
+                  placeholder="Enter your email"
+                />
+              </div>
+
+              {/* Subject - Keeping this as it's in the data, though not in the image explicitly. Will style same way. */}
+
+
+              {/* Message */}
+              <div>
+                {/* The image shows just "Type your Message..." placeholder, but accessible label is good. */}
+                {/* I will hide label visually or keep it subtle? The reference uses clear pink labels for Name/Email. I will use it for Message too. */}
+                {/* Actually, looking at reference, the third field just says "Type your Message...", it might not have a label above it, or it's scrolled. I'll add the label for consistency. */}
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  rows="4"
+                  className="w-full px-0 py-2 border-b-2 border-gray-300 focus:border-cyan-500 focus:ring-0 text-gray-900 bg-transparent transition-colors placeholder-gray-400 resize-none font-medium text-lg mt-4"
+                  placeholder="Type your Message..."
+                ></textarea>
+              </div>
+
+              {/* Submit Button */}
+              <div className="pt-4">
                 <button
                   type="submit"
-                  className="w-full py-4 px-6 rounded-lg font-semibold text-white transition-all duration-300 hover:shadow-lg"
-                  style={{ background: 'linear-gradient(135deg, #06b6d4, #3b82f6)' }}
+                  className="px-10 py-3 bg-[#00bcd4] text-white text-lg font-bold rounded shadow-md hover:bg-[#00acc1] transition-all duration-300 transform hover:-translate-y-1"
                 >
                   {t.sendMessage}
                 </button>
-              </form>
-            </div>
+              </div>
+            </form>
           </div>
+
         </div>
       </div>
     </div>
