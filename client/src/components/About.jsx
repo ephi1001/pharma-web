@@ -12,20 +12,30 @@ export default function About() {
       },
       vision: {
         title: "Our Vision",
-        text: "To be the undisputed world-class leader in pharmaceutical solutions, recognized globally for setting the gold standard in quality, affordability, and ethical service."
+        text: "To be the number one recognized and reliable supplier of complete ranges of top quality yet affordable pharmaceuticals and medical supplies throughout the country.\nTo be one of the Best Regulatory and marketing Service providing Company in our region"
       },
       mission: {
         title: "Our Mission",
-        text: "To revolutionize healthcare access by importing and distributing premium pharmaceutical products. We strive to empower communities through reliable medicine, expert regulatory services, and an unyielding dedication to improving quality of life."
+        items: [
+          "Import and distribute high-quality pharmaceuticals ethically",
+          "Provide comprehensive regulatory and market services",
+          "Support national health policy goals",
+          "Meet clients' holistic needs effectively",
+          "Ensure profitability via customer satisfaction",
+          "Act as exemplary corporate citizen"
+        ]
       },
       values: {
         title: "Core Values",
         items: [
-          "Global Excellence",
-          "Unwavering Integrity",
-          "Scientific Innovation",
-          "Compassionate Care",
-          "Trusted Partnership"
+          "Quality products and service",
+          "partnership",
+          "Commitment",
+          "Continues Learning",
+          "Integrity",
+          "Positive team spirit",
+          "Loyalty",
+          "Lending a hand to others."
         ]
       }
     },
@@ -100,7 +110,13 @@ export default function About() {
 
               <h3 className="text-3xl font-playfair font-bold text-slate-800 mb-6">{t.vision.title}</h3>
               <p className="font-lora text-slate-600 leading-relaxed text-lg italic opacity-90">
-                "{t.vision.text}"
+                {t.vision.text.split('\n').map((line, idx) => (
+                  <span key={idx}>
+                    <span className="inline-block w-2 h-2 rounded-full bg-[#DBC498] mr-3 mt-1"></span>
+                    {line}
+                    {idx < t.vision.text.split('\n').length - 1 && <br />}
+                  </span>
+                ))}
               </p>
             </div>
           </div>
@@ -118,9 +134,15 @@ export default function About() {
                 <Star className="w-8 h-8 text-[#F3E5AB]" />
               </div>
               <h3 className="text-3xl font-playfair font-bold text-white mb-6 tracking-wide">{t.mission.title}</h3>
-              <p className="font-lora text-slate-300 leading-relaxed text-lg font-light">
-                {t.mission.text}
-              </p>
+
+              <ul className="space-y-5 font-lora text-slate-300">
+                {t.mission.items.map((item, idx) => (
+                  <li key={idx} className="flex items-center gap-4 group/item">
+                    <span className="w-2 h-2 rounded-full bg-[#DBC498] group-hover/item:scale-150 transition-transform duration-300"></span>
+                    <span className="text-lg font-medium group-hover/item:text-[#F3E5AB] transition-colors duration-300">{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
 
             <div className="relative z-10 mt-8 pt-6 border-t border-white/10 flex items-center gap-3">

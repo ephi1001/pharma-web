@@ -58,12 +58,12 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="text-[#DBC498] font-playfair font-bold text-lg mb-6 uppercase tracking-wider">Expertise</h3>
+            <h3 className="text-[#DBC498] font-playfair font-bold text-lg mb-6 uppercase tracking-wider">Services</h3>
             <ul className="space-y-3 font-lora text-sm text-gray-300">
-              <li className="hover:text-white transition-colors cursor-default">Medical Distribution</li>
-              <li className="hover:text-white transition-colors cursor-default">Regulatory Compliance</li>
-              <li className="hover:text-white transition-colors cursor-default">Hospital Supply Chain</li>
-              <li className="hover:text-white transition-colors cursor-default">Specialized Medicine</li>
+              <li className="hover:text-white transition-colors cursor-default">Medical Devices</li>
+              <li className="hover:text-white transition-colors cursor-default">Pharmaceutical Products</li>
+              <li className="hover:text-white transition-colors cursor-default">Laboratory Reagents</li>
+              <li className="hover:text-white transition-colors cursor-default">Baby Food</li>
             </ul>
           </div>
 

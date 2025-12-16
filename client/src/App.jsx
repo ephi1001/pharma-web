@@ -4,12 +4,12 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Contact from './components/Contact';
 import About from './components/About';
-import novatherapyImg from './assets/pictures/photo_2025-12-11_17-39-14.jpg';
-import bioshieldImg from './assets/pictures/photo_2025-12-11_17-43-59.jpg';
-import neurocureImg from './assets/pictures/photo_2025-12-11_17-47-56.jpg';
+import novatherapyImg from './assets/pictures/photo_2025-12-16_07-38-56.jpg';
+import bioshieldImg from './assets/pictures/photo_2025-12-16_07-44-11.jpg';
+import neurocureImg from './assets/pictures/photo_2025-12-16_07-14-04.jpg';
 import img4 from './assets/pictures/photo_2025-12-11_05-43-21.jpg';
 import img5 from './assets/pictures/photo_2025-12-11_17-35-04.jpg';
-import img6 from './assets/pictures/photo_2025-12-11_17-37-06.jpg';
+import img6 from './assets/pictures/photo_2025-12-16_07-28-46.jpg';
 import newImage from './assets/pictures/photo_2025-12-11_08-34-42.jpg';
 import logo from './assets/pictures/photo_2025-12-11_16-43-44.jpg';
 import cityBg from './assets/pictures/city_bg.jpg';
@@ -153,9 +153,8 @@ export default function App() {
             <div className={`group relative p-4 rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-[#C5A059]/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#C5A059]/10 cursor-pointer`} onClick={() => handleCardClick(3)}>
               <div className="absolute inset-0 bg-gradient-to-br from-[#C5A059]/10 via-transparent to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="relative z-10 overflow-hidden rounded-2xl bg-white">
-                <img src={novatherapyImg} alt="NovaTherapy" className="w-full h-64 object-cover transform transition-transform duration-700 group-hover:scale-110" />
+                <img src={novatherapyImg} alt="Product" className="w-full h-64 object-cover transform transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
-                  <span className="text-[#F3E5AB] font-playfair text-xl tracking-wide">NovaTherapy</span>
                 </div>
               </div>
             </div>
@@ -164,9 +163,8 @@ export default function App() {
             <div className={`group relative p-4 rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-[#C5A059]/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#C5A059]/10 cursor-pointer`} onClick={() => handleCardClick(4)}>
               <div className="absolute inset-0 bg-gradient-to-br from-[#C5A059]/10 via-transparent to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="relative z-10 overflow-hidden rounded-2xl bg-white">
-                <img src={bioshieldImg} alt="BioShield Vaccine" className="w-full h-64 object-cover transform transition-transform duration-700 group-hover:scale-110" />
+                <img src={bioshieldImg} alt="Product" className="w-full h-64 object-cover transform transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
-                  <span className="text-[#F3E5AB] font-playfair text-xl tracking-wide">BioShield</span>
                 </div>
               </div>
             </div>
@@ -175,9 +173,8 @@ export default function App() {
             <div className={`group relative p-4 rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-[#C5A059]/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#C5A059]/10 cursor-pointer`} onClick={() => handleCardClick(5)}>
               <div className="absolute inset-0 bg-gradient-to-br from-[#C5A059]/10 via-transparent to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="relative z-10 overflow-hidden rounded-2xl bg-white">
-                <img src={neurocureImg} alt="NeuroCure" className="w-full h-64 object-cover transform transition-transform duration-700 group-hover:scale-110" />
+                <img src={neurocureImg} alt="Product" className="w-full h-64 object-cover transform transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
-                  <span className="text-[#F3E5AB] font-playfair text-xl tracking-wide">NeuroCure</span>
                 </div>
               </div>
             </div>
@@ -186,9 +183,8 @@ export default function App() {
             <div className={`group relative p-4 rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-[#C5A059]/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#C5A059]/10 cursor-pointer`} onClick={() => handleCardClick(6)}>
               <div className="absolute inset-0 bg-gradient-to-br from-[#C5A059]/10 via-transparent to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="relative z-10 overflow-hidden rounded-2xl">
-                <img src={img4} alt="CardioGuard" className="w-full h-64 object-cover transform transition-transform duration-700 group-hover:scale-110" />
+                <img src={img4} alt="Product" className="w-full h-64 object-cover transform transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
-                  <span className="text-[#F3E5AB] font-playfair text-xl tracking-wide">CardioGuard</span>
                 </div>
               </div>
             </div>
@@ -197,9 +193,8 @@ export default function App() {
             <div className={`group relative p-4 rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-[#C5A059]/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#C5A059]/10 cursor-pointer`} onClick={() => handleCardClick(7)}>
               <div className="absolute inset-0 bg-gradient-to-br from-[#C5A059]/10 via-transparent to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="relative z-10 overflow-hidden rounded-2xl">
-                <img src={img5} alt="ImmunoBoost" className="w-full h-64 object-cover transform transition-transform duration-700 group-hover:scale-110" />
+                <img src={img5} alt="Product" className="w-full h-64 object-cover transform transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
-                  <span className="text-[#F3E5AB] font-playfair text-xl tracking-wide">ImmunoBoost</span>
                 </div>
               </div>
             </div>
@@ -208,9 +203,8 @@ export default function App() {
             <div className={`group relative p-4 rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-[#C5A059]/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#C5A059]/10 cursor-pointer`} onClick={() => handleCardClick(8)}>
               <div className="absolute inset-0 bg-gradient-to-br from-[#C5A059]/10 via-transparent to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="relative z-10 overflow-hidden rounded-2xl">
-                <img src={img6} alt="PainRelief Pro" className="w-full h-64 object-cover transform transition-transform duration-700 group-hover:scale-110" />
+                <img src={img6} alt="Product" className="w-full h-64 object-cover transform transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
-                  <span className="text-[#F3E5AB] font-playfair text-xl tracking-wide">PainRelief Pro</span>
                 </div>
               </div>
             </div>
