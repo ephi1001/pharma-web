@@ -25,7 +25,7 @@ export default function Footer() {
                   <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
                 </svg>
               </div>
-              <span className="text-2xl font-playfair font-bold text-white tracking-wide">ABR Pharma</span>
+              <span className="text-2xl font-playfair font-bold text-white tracking-wide">Morya Pharma</span>
             </div>
             <p className="text-gray-300 font-lora text-sm leading-relaxed max-w-xs">
               Bridging global innovation with local care. We are committed to excellence, integrity, and the future of healthcare.
@@ -93,11 +93,7 @@ export default function Footer() {
 
         {/* Footer Bottom */}
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400 font-lora">
-          <p>© 2025 ABR Pharma. All rights reserved.</p>
-          <div className="flex gap-6">
-            <span className="hover:text-[#DBC498] cursor-pointer transition-colors">Privacy Policy</span>
-            <span className="hover:text-[#DBC498] cursor-pointer transition-colors">Terms of Service</span>
-          </div>
+          <p>© 2025 Morya Pharma. All rights reserved. | Developed by <a href="https://akiyasolutions.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#DBC498] transition-colors">akiyasolutions.com</a></p>
         </div>
       </div>
     </footer>

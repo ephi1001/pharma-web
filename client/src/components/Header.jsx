@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import logo from '../assets/pictures/photo_2025-12-11_16-43-44.jpg';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,9 +35,9 @@ export default function Header() {
               href="#hero"
               className="flex items-center cursor-pointer transform transition-all duration-300 hover:scale-110"
             >
-              <img src="/src/assets/pictures/photo_2025-12-11_16-43-44.jpg" alt="ABR Pharma Logo" className="h-10 w-10 mr-2 rounded-full" />
-              <span className="text-2xl font-black bg-gradient-to-r from-blue-600 via-purple-500 to-red-600 bg-clip-text text-transparent">
-                ABR Pharma
+              <img src={logo} alt="Morya Pharma Logo" className="h-10 w-10 mr-2 rounded-full" />
+              <span className="text-2xl font-black bg-gradient-to-r from-[#C5A059] via-[#F3E5AB] to-[#C5A059] bg-clip-text text-transparent">
+                Morya Pharma
               </span>
             </a>
           </div>
@@ -54,8 +55,8 @@ export default function Header() {
                   onClick={() => setIsOpen(false)}
                   className={`group relative px-6 py-3 rounded-xl text-sm font-bold transition-all duration-300 overflow-hidden ${
                     (!scrolled)
-                      ? 'text-gray-200 hover:text-white hover:bg-gradient-to-r hover:from-blue-600 hover:via-purple-500 hover:to-red-600 hover:scale-110 hover:shadow-lg'
-                      : 'text-stone-700 hover:text-white hover:bg-gradient-to-r hover:from-blue-600 hover:via-purple-500 hover:to-red-600 hover:scale-110 hover:shadow-lg'
+                      ? 'text-gray-200 hover:text-white hover:bg-gradient-to-r hover:from-[#C5A059] hover:via-[#F3E5AB] hover:to-[#C5A059] hover:scale-110 hover:shadow-lg'
+                      : 'text-stone-700 hover:text-white hover:bg-gradient-to-r hover:from-[#C5A059] hover:via-[#F3E5AB] hover:to-[#C5A059] hover:scale-110 hover:shadow-lg'
                   }`}
                   style={{
                     animationDelay: `${index * 0.1}s`,
@@ -74,7 +75,7 @@ export default function Header() {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="relative p-3 rounded-2xl bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-2xl shadow-purple-500/50 transition-all duration-300 hover:scale-110 hover:rotate-12"
+              className="relative p-3 rounded-2xl bg-gradient-to-r from-[#C5A059] to-[#F3E5AB] text-white shadow-2xl shadow-[#C5A059]/50 transition-all duration-300 hover:scale-110 hover:rotate-12"
             >
               <div className="relative z-10">
                 {isOpen ? (
@@ -83,7 +84,7 @@ export default function Header() {
                   <span className="h-6 w-6">☰</span>
                 )}
               </div>
-              <div className="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#F3E5AB] to-[#C5A059] rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </button>
           </div>
         </div>
@@ -106,8 +107,8 @@ export default function Header() {
                 onClick={() => setIsOpen(false)}
                 className={`w-full flex items-center space-x-3 px-6 py-4 text-left font-bold transition-all duration-300 ${
                   (!scrolled)
-                    ? 'text-gray-200 hover:bg-gradient-to-r hover:from-blue-600 hover:via-purple-500 hover:to-red-600 hover:text-white'
-                    : 'text-stone-700 hover:bg-gradient-to-r hover:from-blue-600 hover:via-purple-500 hover:to-red-600 hover:text-white'
+                    ? 'text-gray-200 hover:bg-gradient-to-r hover:from-[#C5A059] hover:via-[#F3E5AB] hover:to-[#C5A059] hover:text-white'
+                    : 'text-stone-700 hover:bg-gradient-to-r hover:from-[#C5A059] hover:via-[#F3E5AB] hover:to-[#C5A059] hover:text-white'
                 } ${index !== navigation.length - 1 ? 'border-b border-white/10' : ''}`}
                 style={{
                   animationDelay: `${index * 0.1}s`,

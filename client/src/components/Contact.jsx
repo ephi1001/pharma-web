@@ -18,7 +18,7 @@ export default function Contact() {
   const translations = {
     en: {
       title: 'Contact Us',
-      description: "Have questions about our services or want to discuss a potential partnership? We'd love to hear from you.",
+      description: "Have questions about our products or want to discuss a potential partnership? We'd love to hear from you.",
       getInTouch: 'Get In Touch',
       address: 'Address',
       addressValue: 'Addis Ababa, Ethiopia',

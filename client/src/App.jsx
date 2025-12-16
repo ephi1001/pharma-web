@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Shield, FileText, DollarSign } from 'lucide-react';
+import { Shield, FileText, DollarSign, MessageCircle } from 'lucide-react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Contact from './components/Contact';
@@ -26,7 +26,7 @@ export default function App() {
 
   const cards = [
     { emoji: '🛡️', title: 'Quality Product', text: 'Delivering superior quality pharmaceutical products with uncompromising standards of excellence and regulatory compliance.' },
-    { emoji: '📋', title: 'Regulatory and Marketing Service', text: 'Comprehensive regulatory compliance and effective marketing services to support pharmaceutical distribution and promotion.' },
+    { emoji: '📋', title: 'Regulatory and Marketing Product', text: 'Comprehensive regulatory compliance and effective marketing products to support pharmaceutical distribution and promotion.' },
     { emoji: '💰', title: 'Affordable Price', text: 'Offering competitive and affordable pricing without compromising on quality or efficacy.' }
   ];
 
@@ -104,9 +104,9 @@ export default function App() {
 
             {/* Main Title - Luxurious Liquid Gold */}
             <h1 className="text-6xl md:text-8xl lg:text-9xl font-playfair font-medium text-white tracking-tight leading-[1.1] mb-8 animate-fade-in-up delay-200">
-              The Art of <br />
+              Morya <br />
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#C5A059] via-[#F3E5AB] to-[#C5A059] text-shimmer italic relative drop-shadow-lg">
-                Care & Science
+                Pharma
               </span>
             </h1>
 
@@ -141,7 +141,7 @@ export default function App() {
         <div className="container mx-auto px-4 w-full relative z-10">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-4xl md:text-5xl font-playfair font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#C5A059] via-[#F3E5AB] to-[#C5A059] animate-fade-in shadow-gold filter drop-shadow-lg">
-              Products and Services
+              products
             </h2>
             <p className="text-blue-100/80 max-w-2xl mx-auto text-lg font-lora font-light">
               Innovative pharmaceutical solutions crafted for global excellence.
@@ -266,10 +266,10 @@ export default function App() {
                   </div>
 
                   <h3 className="text-2xl font-playfair font-bold text-white mb-4 group-hover:text-amber-300 transition-colors">
-                    Regulatory Service
+                    Regulatory Product
                   </h3>
                   <p className="text-gray-300 font-lora leading-relaxed text-sm group-hover:text-white transition-colors">
-                    Expert regulatory affairs and marketing support for pharmaceutical products. We ensure compliance with global standards and provide strategic marketing solutions to enhance product visibility and distribution.
+                    Expert regulatory affairs and marketing support for pharmaceutical products. We ensure compliance with global standards and provide strategic marketing products to enhance product visibility and distribution.
                   </p>
                 </div>
               </div>
@@ -314,6 +314,17 @@ export default function App() {
       </section>
 
       <Footer />
+
+      {/* Floating WhatsApp Button */}
+      <a
+        href="https://wa.me/251969797979"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-4 right-4 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-colors duration-300 z-50"
+        aria-label="Contact us on WhatsApp"
+      >
+        <MessageCircle className="w-6 h-6" />
+      </a>
     </div>
   );
 }

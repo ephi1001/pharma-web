@@ -8,17 +8,17 @@ export default function About() {
     en: {
       about: {
         title: "About Morya Pharma",
-        text: "Morya Pharma was founded by two entrepreneurs with extensive experience in pharmaceuticals and marketing. We comply with all legal requirements set by Ethiopia's Ministry of Health, Food and Drug Administration, and Ministry of Trade. Our core business focuses on distribution, foreign company representation, and regulatory and marketing services. With proactive management and effective leadership, we meet growing customer needs and support Ethiopia's health sector development goals."
+        text: "Morya Pharma was founded by two entrepreneurs with extensive experience in pharmaceuticals and marketing. We comply with all legal requirements set by Ethiopia's Ministry of Health, Food and Drug Administration, and Ministry of Trade. Our core business focuses on distribution, foreign company representation, and regulatory and marketing products. With proactive management and effective leadership, we meet growing customer needs and support Ethiopia's health sector development goals."
       },
       vision: {
         title: "Our Vision",
-        text: "To be the number one recognized and reliable supplier of complete ranges of top quality yet affordable pharmaceuticals and medical supplies throughout the country.\nTo be one of the Best Regulatory and marketing Service providing Company in our region"
+        text: "To be the number one recognized and reliable supplier of complete ranges of top quality yet affordable pharmaceuticals and medical supplies throughout the country.\nTo be one of the Best Regulatory and marketing Product providing Company in our region"
       },
       mission: {
         title: "Our Mission",
         items: [
           "Import and distribute high-quality pharmaceuticals ethically",
-          "Provide comprehensive regulatory and market services",
+          "Provide comprehensive regulatory and market products",
           "Support national health policy goals",
           "Meet clients' holistic needs effectively",
           "Ensure profitability via customer satisfaction",
@@ -28,7 +28,7 @@ export default function About() {
       values: {
         title: "Core Values",
         items: [
-          "Quality products and service",
+          "Quality products and product",
           "partnership",
           "Commitment",
           "Continues Learning",

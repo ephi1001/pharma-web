@@ -1,7 +1,7 @@
 {
-  "name": "abr-pharma-backend",
+  "name": "morya-pharma-backend",
   "version": "1.0.0",
-  "description": "Backend server for ABR Pharma website",
+  "description": "Backend server for Morya Pharma website",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
