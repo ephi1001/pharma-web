@@ -21,7 +21,7 @@ const transporter = nodemailer.createTransport({
 
 // Route to handle contact messages
 app.post('/api/contact-messages', async (req, res) => {
-  const { name, email, message, rating, location } = req.body;
+  const { name, email, message } = req.body;
 
   const mailOptions = {
     from: process.env.EMAIL_USER,
@@ -32,8 +32,6 @@ app.post('/api/contact-messages', async (req, res) => {
       <p><strong>Name:</strong> ${name}</p>
       <p><strong>Email:</strong> ${email}</p>
       <p><strong>Message:</strong> ${message}</p>
-      <p><strong>Rating:</strong> ${rating}</p>
-      <p><strong>Location:</strong> ${location}</p>
     `
   };
 
